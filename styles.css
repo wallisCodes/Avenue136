@@ -1,0 +1,399 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;    
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+
+/* -------------------- NAVBAR -------------------- */
+.navbar {
+    /* background-color: #000; */
+    color: #D9C666;
+    display: flex;
+    height: 8svh;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+
+/* -------------------- LANDING PAGE -------------------- */
+.hero-container {
+    position: relative;
+    margin: auto;
+}
+
+.hero-mask {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #D9C666;
+}
+
+.hero-text {
+    color: #D9C666;
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+.hero-buttons {
+    margin: 0 auto 1.25rem;
+    font-size: 1.4em;
+    /* margin: 5px 0; */
+}
+
+.hero-btn {
+    text-decoration: none;
+    /* border-radius: 5px solid; */
+    border: 2px solid #D9C666;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 0.4em;
+    color: #D9C666;
+}
+
+.hero-btn:hover {
+    background-color: #D9C666;
+    color: black;
+}
+
+/* -------------------- SERVICES -------------------- */
+#services {
+    /* border: 1px solid black; */
+    min-height: 100vh;
+    background-color: #F2EBC9;
+}
+
+.service-title {
+    font-size: 4em;
+    /* color: #D9C666; */
+    width: fit-content;
+}
+
+#service-menu {
+    margin: 0 auto;
+    /*  */
+}
+
+.service-tabs {
+    /* border: 1px solid blue; */
+}
+
+.service-btn-ladies, .service-btn-gents-juniors {
+    font-size: 1.3em;
+    background-color: #F2EBC9;
+}
+
+/* .service-btn-ladies {
+    border-right: 2px solid black;
+} */
+
+.active-tab {
+    background-color: #D9C666;
+    border-bottom: 2px solid black;
+}
+
+.service-list {
+    border: 1px solid purple;
+    list-style-type: none;
+}
+
+.service-item, .service-item-alt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-item {
+    background-color: #D9C666;
+}
+
+/* .service-category {
+    text-decoration: underline;
+} */
+
+.line-break {
+    width: 60%;
+    margin-top: 1em;
+}
+
+.service-name, .service-price {
+    font-weight: bold;
+}
+
+/* -------------------- Gallery -------------------- */
+#gallery {
+    height: 100svh;
+    background-color: #D9C666;
+}
+
+/* -------------------- CONTACT -------------------- */
+#contact {
+    height: 100svh;
+    background-color: grey;
+}
+
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+    /* background-color: #000; */
+    color: #D9C666;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    /* height: 6svh; */
+}
+
+.copyright {
+    font-size: 1.5rem;
+}
+
+.footer-icon {
+    color: #D9C666;
+}
+
+
+/* CSS rules for small screen sizes, 600px and below */
+@media only screen and (max-width: 600px) {
+    /* .page-title {
+        font-size: 2em;
+        margin: 1.8rem 0;
+    } */
+
+    /* -------------------- NAVBAR -------------------- */
+    .navbar {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* -------------------- LANDING PAGE -------------------- */
+    .hero-image-sm {
+        display: block;
+        height: 92svh;
+        width: 100%;
+        /* object-fit: contain; */
+        object-fit: cover;
+    }
+
+    .hero-image-lg {
+        display: none;
+    }
+
+    .hero-mask {
+        width: 90%;
+        left: 5%;
+    }
+
+    .hero-text {
+        font-size: 0.9em;
+    }
+
+    .hero-buttons {
+        display: none;
+    }
+
+    /* -------------------- SERVICES -------------------- */
+    #service-menu {
+        width: 90%;
+        border: 2px solid black;
+    }
+
+    .service-title {
+        margin: 0 auto 1rem; 
+        padding-top: 1rem;
+    }
+
+    .service-category {
+        padding: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .service-name, .service-price {
+        padding: 0.5rem;
+    }
+
+    .disclaimer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .disclaimer-icon {
+        padding: 0.4rem 0.4rem 0 0.5rem;
+    }
+
+    .disclaimer-text {
+        padding-right: 0.5rem;
+    }
+
+    /* -------------------- GALLERY -------------------- */
+    .gallery-photos-sm {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        background-color: aqua;
+        border: 2px solid black;
+    }
+
+    #gallery-photos-lg {
+        display: none;
+    }
+
+    .haircut-photo-sm {
+        object-fit: cover;
+        width: 100%;
+        /* height: 642px; */
+        /* border: solid 2px red; */
+        /* margin-top: 107px; */
+        /* width: fit-content; */
+    }
+}
+
+
+/* CSS rules for medium and larger screen sizes, 601px and above */
+@media only screen and (min-width: 601px) {
+    /* .page-title {
+        font-size: 3em;
+        margin: 1.8rem 0;
+    } */
+
+    /* -------------------- NAVBAR -------------------- */
+    .navbar {
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .nav-link {
+        color: #D9C666;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: large;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid #D9C666;
+        padding-bottom: 2px;
+    }
+
+    /* -------------------- LANDING PAGE -------------------- */
+    .hero-image-sm {
+        display: none;
+    }
+
+    .hero-image-lg {
+        display: block;
+        height: 92vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-mask {
+        width: 60%;
+        left: 20%;
+    }
+
+    .hero-text {
+        font-size: 1.2em;
+    }
+
+    .hero-buttons {
+        display: block;
+    }
+
+    /* -------------------- SERVICES -------------------- */
+    #services {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-title {
+        height: fit-content;
+        margin: 2rem auto 0;
+    }
+
+    .service-container {
+        width: 60%;
+        display: flex;
+        border: solid 2px black;
+        margin: 2rem auto 3rem;
+    }
+
+    #service-menu {
+        width: 50%;
+        height: fit-content;
+        /* margin-top: 1rem; */
+        /* margin-bottom: 3rem; */
+    }
+
+    .service-category {
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .service-name {
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+    
+    .service-price {
+        padding: 0.5rem 1rem 0.5rem 0;
+    }
+
+    .disclaimer {
+        display: flex;
+        flex-direction: row; /* is this needed? */
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .disclaimer-icon {
+        padding: 0 0.4rem 0 1rem;
+    }
+
+    .disclaimer-text {
+        padding-right: 1rem;
+    }
+
+    /* -------------------- GALLERY -------------------- */
+    #gallery-photos-lg {
+        display: flex;
+        width: 50%;
+        background-color: aqua;
+        border-left: solid 2px black;
+        /* border: 2px solid black; */
+    }
+
+    .gallery-photos-sm {
+        display: none;
+    }
+
+    #haircut-photo-lg {
+        object-fit: cover;
+        width: 100%;
+        /* height: 642px; */
+        /* border: solid 2px red; */
+        /* margin-top: 107px; */
+        /* width: fit-content; */
+    }
+} 
