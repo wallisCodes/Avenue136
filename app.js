@@ -4,7 +4,7 @@ function resizeServicePhoto() {
   menu_height = service_menu.offsetHeight; //height in pixels of menu content + padding + border
   // console.log("Height of box = " + menu_height + " pixels.");
 
-  haircut_photo_lg = document.getElementById("haircut-photo-lg");
+  haircut_photo_lg = document.getElementById("service-photo");
   haircut_photo_lg.style.height = menu_height + "px";
   // console.log("Height of photo = " + haircut_photo_lg.offsetHeight + " pixels.");
 }
