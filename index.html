@@ -54,7 +54,7 @@
 
     <!-- SERVICES-->
     <section id="services">
-        <div class="service-title">Services</div>
+        <div class="content-title">Services</div>
 
         <div class="service-container">    
             <div id="service-menu">
@@ -63,7 +63,7 @@
                     <button class="service-btn-gents-juniors service-tab" onclick="switchService(event, 'services-gents-juniors')">Gents/Juniors</button>
                 </div>
 
-                <ul id="services-ladies" class="services-list">          
+                <ul id="services-ladies">          
                     <li class="service-item">
                         <span class="service-name">Restyle</span><span class="service-price">£38</span>  
                     </li>
@@ -158,16 +158,17 @@
                 <img id="service-photo" src="assets/img/chair.jpeg" alt="">                
             </div>
         </div>
-        
-
-        
     </section>
 
 
     <!-- GALLERY -->
-    <section id="gallery" style="display: none">
-        <div class="gallery-title">Gallery</div>
+    <section id="gallery" style="display: none"> <!-- TBC -->
+        <div class="content-title">Gallery</div>
 
+        <div class="gallery-carousel-nav">
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10093;</button>
+        </div>
         <div class="gallery-carousel">
             <img class="gallery-photo" src="assets/img/haircut-4.jpeg" alt="">                
         </div>
@@ -175,7 +176,50 @@
 
 
     <!-- CONTACT -->
-    <section id="contact" style="display: none">
+    <section id="contact">
+        <div class="content-title">Contact</div>
+
+        <div class="contact-box">
+            <ul class="contact-info">
+                <li class="contact-item">
+                    <i class="fa-solid fa-location-dot contact-icon"></i>
+                    <span class="contact-info-text">136 Waunscil Avenue</span>  
+                </li>
+                <li class="contact-item-alt">
+                    <i class="fa-solid fa-phone contact-icon"></i>
+                    <span class="contact-info-text">01656 653117</span>
+                </li>
+                <li class="contact-item">
+                    <i class="fa-solid fa-clock contact-icon"></i>
+                    <span class="contact-info-text">Opening Times:</span>
+                </li>
+
+                <li class="opening-times-alt">
+                    <span class="opening-day">Monday</span><span class="opening-time">9am-8pm</span>
+                </li>
+                <li class="opening-times">
+                    <span class="opening-day">Tueday</span><span class="opening-time">9am-8pm</span>
+                </li>
+                <li class="opening-times-alt">
+                    <span class="opening-day">Wednesday</span><span class="opening-time">9am-8pm</span>
+                </li>
+                <li class="opening-times">
+                    <span class="opening-day">Thursday</span><span class="opening-time">9am-8pm</span>
+                </li>
+                <li class="opening-times-alt">
+                    <span class="opening-day">Friday</span><span class="opening-time">9am-8pm</span>
+                </li>
+                <li class="opening-times">
+                    <span class="opening-day">Saturday</span><span class="opening-time">9am-4pm</span>
+                </li>
+                <li class="opening-times-alt">
+                    <span class="opening-day">Sunday</span><span class="opening-time">Closed</span>
+                </li>
+                
+            </ul>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.322129457727!2d-3.5719902230799456!3d51.50730591070983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e6c4bc38c1edd%3A0xd697f33b1109d07d!2s136%20Waunscil%20Ave%2C%20Bridgend%20CF31%201TN!5e0!3m2!1sen!2suk!4v1700583615221!5m2!1sen!2suk" class="contact-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
     </section>
 
@@ -186,12 +230,12 @@
         <a href="#" class="footer-icon" style="visibility: hidden">
             <i class="fa-solid fa-circle-arrow-up fa-2xl"></i>
         </a>
-        <span class="copyright">Copyright &copy; wallisCodes</span>
+        <span class="copyright">Copyright &#169; wallisCodes</span>
         <a href="#" class="footer-icon">
             <i class="fa-solid fa-circle-arrow-up fa-2xl"></i>
         </a>
         
     </footer>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

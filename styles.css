@@ -69,20 +69,10 @@ ul {
 
 /* -------------------- SERVICES -------------------- */
 #services {
-    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background-color: #F2EBC9;
-}
-
-.service-title {
-    font-size: 4em;
-    /* color: #D9C666; */
-    width: fit-content;
-}
-
-#service-menu {
-    /* margin: 0 auto; */
-    /*  */
 }
 
 .service-btn-ladies, .service-btn-gents-juniors {
@@ -90,18 +80,9 @@ ul {
     background-color: #F2EBC9;
 }
 
-/* .service-btn-ladies {
-    border-right: 2px solid black;
-} */
-
 .active-tab {
     background-color: #D9C666;
     border-bottom: 2px solid black;
-}
-
-.service-list {
-    border: 1px solid purple;
-    list-style-type: none;
 }
 
 .service-item, .service-item-alt {
@@ -114,10 +95,6 @@ ul {
     background-color: #D9C666;
 }
 
-/* .service-category {
-    text-decoration: underline;
-} */
-
 .line-break {
     width: 60%;
     margin-top: 1em;
@@ -129,25 +106,48 @@ ul {
 
 /* -------------------- Gallery -------------------- */
 #gallery {
-    height: 100svh;
-    background-color: #D9C666;
-}
-
-.gallery-title {
-    font-size: 4em;
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: grey;
 }
 
 /* -------------------- CONTACT -------------------- */
 #contact {
-    height: 100svh;
-    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #D9C666;
 }
 
+.contact-info {
+    list-style-type: none;
+}
+
+.contact-item, .contact-item-alt {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.opening-times, .opening-times-alt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.contact-item-alt, .opening-times-alt {
+    background-color: #F2EBC9;
+}
+
+.contact-map {
+    width: 50%;
+    border: none;
+}
 
 /* -------------------- FOOTER -------------------- */
 .footer {
-    /* background-color: #000; */
     color: #D9C666;
     display: flex;
     justify-content: space-around;
@@ -167,10 +167,18 @@ ul {
 
 /* CSS rules for small screen sizes, 600px and below */
 @media only screen and (max-width: 600px) {
-    /* .page-title {
-        font-size: 2em;
-        margin: 1.8rem 0;
-    } */
+    /* -------------------- REUSED COMPONENTS -------------------- */
+    .content-title {
+        font-size: 4em;
+        width: fit-content;
+        margin: 1rem auto;
+    }
+
+    .content-box {
+        width: 90%;
+        margin: 0 auto;
+        border: 2px solid black;
+    }
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
@@ -209,15 +217,14 @@ ul {
     }
 
     /* -------------------- SERVICES -------------------- */
+    .service-title {
+        margin: 1rem auto;
+    }
+
     #service-menu {
         width: 90%;
         margin: 0 auto;
         border: 2px solid black;
-    }
-
-    .service-title {
-        margin: 0 auto 1rem; 
-        padding-top: 1rem;
     }
 
     .service-category {
@@ -231,7 +238,7 @@ ul {
 
     .disclaimer {
         display: flex;
-        flex-direction: row;
+        /* flex-direction: row; */
         align-items: center;
         margin-top: 1rem;
     }
@@ -253,28 +260,78 @@ ul {
         margin: 0 auto 1rem; 
         padding-top: 1rem;
     }
+    
+    .gallery-carousel-nav {
+        position: relative;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        /* transform: translateY(-50%); */
+        background: none;
+        border: none;
+        font-size: 4rem;
+    }
 
     .gallery-carousel {
         display: block;
+        position: relative;
         width: 90%;
+        height: 80vh;
         margin: 0 auto;
         /* background-color: aqua; */
         border: 2px solid black;
     }
 
     .gallery-photo {
+        position: absolute;
         object-fit: cover;
         width: 100%;
+        height: 100%;
+    }
+
+
+    /* -------------------- CONTACT -------------------- */
+    .contact-box {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        border: 2px solid black;
+    }
+
+    .contact-info, .contact-map {
+        width: 100%;
+    }
+
+    .contact-map {
+        height: 35vh;
+    }
+
+    .opening-day, .opening-time, .contact-icon {
+        padding: 0.5rem 0.3rem 0.5rem 0.5rem;
     }
 }
 
 
+
+
 /* CSS rules for medium and larger screen sizes, 601px and above */
 @media only screen and (min-width: 601px) {
-    /* .page-title {
-        font-size: 3em;
-        margin: 1.8rem 0;
-    } */
+    /* -------------------- REUSED COMPONENTS -------------------- */
+    .content-title {
+        font-size: 4em;
+        width: fit-content;
+        margin: 2rem auto;
+    }
+
+    .content-box {
+        width: 60%;
+        margin: 0 auto;
+        border: 2px solid black;
+    }
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
@@ -326,26 +383,17 @@ ul {
     }
 
     /* -------------------- SERVICES -------------------- */
-    #services {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .service-title {
-        height: fit-content;
-        margin: 2rem auto 0;
-    }
-
     .service-container {
         width: 60%;
+        height: 70vh;
         display: flex;
         border: solid 2px black;
-        margin: 2rem auto 3rem;
+        margin: 0 auto 3rem;
     }
 
     #service-menu {
         width: 50%;
-        height: fit-content;
+        overflow: hidden;
     }
 
     .service-category {
@@ -363,7 +411,6 @@ ul {
 
     .disclaimer {
         display: flex;
-        /* flex-direction: row; */
         align-items: center;
         margin-top: 1rem;
     }
@@ -377,16 +424,16 @@ ul {
     }
 
     #service-photo-container {
-        display: flex;
+        /* display: flex; */
+        height: inherit;
         width: 50%;
-        /* background-color: aqua; */
         border-left: solid 2px black;
-        /* border: 2px solid black; */
     }
 
     #service-photo {
         object-fit: cover;
         width: 100%;
+        height: 100%;
     }
 
     /* -------------------- GALLERY -------------------- */
@@ -403,13 +450,44 @@ ul {
     .gallery-carousel {
         display: block;
         width: 60%;
+        height: 80vh;
         margin: 0 auto;
         border: 2px solid black;
     }
 
     .gallery-photo {
         object-fit: contain;
-        height: 80vh;
         width: 100%;
+        height: 100%;
+    }
+
+    /* -------------------- CONTACT -------------------- */
+    .contact-box {
+        display: flex;
+        width: 60%;
+        height: 70vh;
+        font-size: 1.2em;
+        margin: 0 auto;
+        border: 2px solid black;
+    }
+
+    .contact-info, .contact-map {
+        width: 50%;
+    }
+
+    .contact-map {
+        border-left: 2px solid black;
+    }
+
+    .opening-day, .contact-icon {
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+
+    .contact-info-text {
+        padding: 0.5rem;
+    }
+    
+    .opening-time {
+        padding: 0.5rem 1rem 0.5rem 0;
     }
 } 
