@@ -10,20 +10,52 @@ body {
 }
 
 ul {
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* -------------------- REUSED COMPONENTS -------------------- */
+.content-title {
+    font-size: 2.5rem; /* default value, varies with viewport size */
+    width: fit-content;
+    margin: 0.5rem auto; /* default value, varies with viewport size */
+}
+
+.content-box {
+    font-size: 1rem;
+    width: 90%; /* default value, varies with viewport size */
+    margin: 0 auto;
+    border: 2px solid black;
 }
 
 
 /* -------------------- NAVBAR -------------------- */
 .navbar {
-    /* background-color: #000; */
-    color: #D9C666;
     display: flex;
-    height: 8svh;
-    margin: 0 auto;
+    width: 90%; /* default value, varies with viewport size */
+    height: 7svh; /* default value, varies with viewport size */
+    justify-content: center; /* default value, varies with viewport size */
     align-items: center;
-    
+    margin: 0 auto;
+    color: #D9C666;
 }
+
+.brand-logo {
+    height: 1.5rem; /* default value, varies with viewport size */
+}
+
+.nav-links {
+    display: none; /* default value, varies with viewport size */
+    list-style-type: none;
+}
+
+.nav-link {
+    color: #D9C666;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
 /* -------------------- LANDING PAGE -------------------- */
 .hero-container {
@@ -31,58 +63,71 @@ ul {
     margin: auto;
 }
 
+.hero-image-sm {
+    display: block; /* vary with viewport size */
+    height: 93svh; /* min-height or height? */
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-image-lg {
+    display: none; /* vary with viewport size */
+}
+
 .hero-mask {
     position: absolute;
     display: flex;
     flex-direction: column;
-    bottom: 5%;
-    background-color: rgba(0, 0, 0, 0.9);
+    width: 90%; /* vary with viewport size */
+    left: calc(5% - 2px); /* vary with viewport size, -2px to account for border */
+    bottom: 3%; /* vary with viewport size */
+    background-color: rgba(0, 0, 0, 0.85);
     border: 2px solid #D9C666;
 }
 
-.hero-text {
+.hero-text-1, .hero-text-2 {
     color: #D9C666;
-    padding: 0 1.25rem;
+    font-size: 0.9em; /* vary with viewport size */
     text-align: center;
+    padding: 0 1rem; /* default size, varies with viewport size */
 }
 
-.hero-buttons {
-    margin: 0 auto 1.25rem;
-    font-size: 1.4em;
-    /* margin: 5px 0; */
+.hero-text-1 {
+    margin-bottom: 2px;
 }
 
-.hero-btn {
-    text-decoration: none;
-    /* border-radius: 5px solid; */
-    border: 2px solid #D9C666;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 0 0.4em;
-    color: #D9C666;
+.hero-text-2 {
+    margin-top: 2px;
 }
 
-.hero-btn:hover {
-    background-color: #D9C666;
-    color: black;
-}
 
 /* -------------------- SERVICES -------------------- */
 #services {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: #F2EBC9;
 }
 
+#service-menu {
+    font-size: 0.9rem; /* vary with viewport size */
+    width: 90%; /* vary with viewport size */
+    margin: 0 auto 1rem;
+    border: 2px solid black;
+}
+
 .service-btn-ladies, .service-btn-gents-juniors {
-    font-size: 1.3em;
-    background-color: #F2EBC9;
+    font-size: 1.1em;
+    border: 2px solid black;
+    padding: 0.3em 0.6em;
+    margin: 0.25em 0 0.5em 0.25em;
+    background-color: lightgray;
 }
 
 .active-tab {
     background-color: #D9C666;
-    border-bottom: 2px solid black;
+    font-weight: bold;
+    /* border-bottom: 2px solid black; */
 }
 
 .service-item, .service-item-alt {
@@ -95,33 +140,80 @@ ul {
     background-color: #D9C666;
 }
 
+.service-category {
+    padding: 0.5rem; /* vary with viewport size */
+    margin-top: 1rem; /* vary with viewport size */
+}
+
 .line-break {
-    width: 60%;
-    margin-top: 1em;
+    width: 60%; /* default size, varies with viewport size */
+    margin-top: 1em; /* default size, varies with viewport size */
 }
 
 .service-name, .service-price {
+    padding: 0.5rem; /* vary with viewport size */
     font-weight: bold;
 }
+
+.disclaimer {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0; /* vary with viewport size */
+}
+
+.disclaimer-icon {
+    padding: 0.2rem 0.4rem 0 0.5rem; /* vary with viewport size */
+}
+
+.disclaimer-text {
+    font-size: 0.8em;
+    padding-right: 0.5rem; /* vary with viewport size */
+}
+
+#service-photo-container {
+    display: none; /* vary with viewport size */
+}
+
 
 /* -------------------- Gallery -------------------- */
 #gallery {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background-color: grey;
 }
+
+.gallery-photo {
+    /* position: absolute; */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* -------------------- CONTACT -------------------- */
 #contact {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: #D9C666;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column; /* vary with viewport size */
+    font-size: 0.9rem; /* vary with viewport size */
+    width: 90%; /* vary with viewport size */
+    margin: 0 auto 1rem;
+    border: 2px solid black;
 }
 
 .contact-info {
     list-style-type: none;
+}
+
+.contact-info, .contact-map {
+    width: 100%; /* vary with viewport size */
 }
 
 .contact-item, .contact-item-alt {
@@ -141,23 +233,30 @@ ul {
     background-color: #F2EBC9;
 }
 
-.contact-map {
-    width: 50%;
-    border: none;
+.opening-day, .opening-time, .contact-icon {
+    padding: 0.5rem; /* vary with viewport size */
 }
+
+.contact-map {
+    height: 35vh; /* vary with viewport size */
+    border: none;
+    border-top: 2px solid black;
+}
+
 
 /* -------------------- FOOTER -------------------- */
 .footer {
-    color: #D9C666;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
-    /* height: 6svh; */
+    width: 90%;
+    height: 7svh; /* default size, varies with viewport size */
+    margin: 0 auto;
+    color: #D9C666;
 }
 
 .copyright {
-    font-size: 1.5rem;
+    font-size: 1rem; /* default size, varies with viewport size */
 }
 
 .footer-icon {
@@ -165,197 +264,196 @@ ul {
 }
 
 
-/* CSS rules for small screen sizes, 600px and below */
-@media only screen and (max-width: 600px) {
+
+
+
+
+
+
+/* CSS rules for small viewports, 360px to 575px */
+@media only screen and (min-width: 360px) and (max-width: 575px) {
     /* -------------------- REUSED COMPONENTS -------------------- */
     .content-title {
-        font-size: 4em;
-        width: fit-content;
-        margin: 1rem auto;
+        font-size: 3rem;/* vary with viewport size */
+        margin: 1rem auto; /* vary with viewport size */
     }
 
     .content-box {
-        width: 90%;
-        margin: 0 auto;
-        border: 2px solid black;
+        font-size: 1.1rem;
+        width: 90%; /* vary with viewport size */
     }
+
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
-        width: 90%;
-        justify-content: center;
+        width: 90%; /* vary with viewport size */
+    }
+
+    .brand-logo {
+        height: 2rem; /* vary with viewport size */
     }
 
     .nav-links {
-        display: none;
+        display: none; /* vary with viewport size */
     }
+
 
     /* -------------------- LANDING PAGE -------------------- */
     .hero-image-sm {
-        display: block;
-        height: 92svh;
-        width: 100%;
-        /* object-fit: contain; */
-        object-fit: cover;
+        display: block; /* vary with viewport size */
     }
 
     .hero-image-lg {
-        display: none;
+        display: none; /* vary with viewport size */
     }
 
     .hero-mask {
-        width: 90%;
-        left: 5%;
+        width: 90%; /* vary with viewport size */
+        left: calc(5% - 2px); /* vary with viewport size, -2px to account for border */
     }
 
-    .hero-text {
-        font-size: 0.9em;
+    .hero-text-1, .hero-text-2 {
+        font-size: 1em; /* vary with viewport size */
+        padding: 0 1rem; /* default size, varies with viewport size */
+    }
+    
+    .hero-text-1 {
+        margin-bottom: 5px;
+    }
+    
+    .hero-text-2 {
+        margin-top: 5px;
     }
 
-    .hero-buttons {
-        display: none;
-    }
 
     /* -------------------- SERVICES -------------------- */
     .service-title {
-        margin: 1rem auto;
+        margin: 1rem auto; /* vary with viewport size */
     }
 
     #service-menu {
-        width: 90%;
-        margin: 0 auto;
-        border: 2px solid black;
+        font-size: 1rem; /* vary with viewport size */
+        width: 90%; /* vary with viewport size */
     }
 
+    /* .service-btn-ladies, .service-btn-gents-juniors { */
+        /* font-size: 1.1em;  */
+        /* padding: 0.3em 0.6em;  */
+        /* margin: 0.25em 0 0 0.25em;  */
+        
+    /* } */
+
     .service-category {
-        padding: 0.5rem;
-        margin-top: 1rem;
+        padding: 0.5rem; /* vary with viewport size */
+        margin-top: 1rem; /* vary with viewport size */
     }
 
     .service-name, .service-price {
-        padding: 0.5rem;
+        padding: 0.5rem; /* vary with viewport size */
     }
 
     .disclaimer {
-        display: flex;
-        /* flex-direction: row; */
-        align-items: center;
-        margin-top: 1rem;
+        margin-top: 1rem; /* vary with viewport size */
     }
 
     .disclaimer-icon {
-        padding: 0.4rem 0.4rem 0 0.5rem;
+        padding: 0.4rem 0.5rem 0 0.5rem; /* vary with viewport size */
     }
 
     .disclaimer-text {
-        padding-right: 0.5rem;
+        font-size: 1rem;
+        padding-right: 0.5rem; /* vary with viewport size */
     }
 
     #service-photo-container {
-        display: none;
+        display: none; /* vary with viewport size */
     }
+
 
     /* -------------------- GALLERY -------------------- */
     .gallery-title {
-        margin: 0 auto 1rem; 
-        padding-top: 1rem;
-    }
-    
-    .gallery-carousel-nav {
-        position: relative;
+        margin: 0 auto 1rem; /* vary with viewport size */
+        padding-top: 1rem; /* vary with viewport size */
     }
 
-    .carousel-btn {
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        /* transform: translateY(-50%); */
-        background: none;
-        border: none;
-        font-size: 4rem;
-    }
-
-    .gallery-carousel {
-        display: block;
-        position: relative;
-        width: 90%;
-        height: 80vh;
-        margin: 0 auto;
-        /* background-color: aqua; */
-        border: 2px solid black;
-    }
-
-    .gallery-photo {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+    .gallery-content {
+        width: 90%; /* vary with viewport size */
+        height: 80vh; /* vary with viewport size */
     }
 
 
     /* -------------------- CONTACT -------------------- */
     .contact-box {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        margin: 0 auto;
-        border: 2px solid black;
+        font-size: 1rem; /* vary with viewport size */
+        width: 90%; /* vary with viewport size */
     }
 
     .contact-info, .contact-map {
-        width: 100%;
+        width: 100%; /* vary with viewport size */
     }
 
     .contact-map {
-        height: 35vh;
+        height: 35vh; /* vary with viewport size */
     }
 
     .opening-day, .opening-time, .contact-icon {
-        padding: 0.5rem 0.3rem 0.5rem 0.5rem;
+        padding: 0.5rem 0.3rem 0.5rem 0.5rem; /* vary with viewport size */
+    }
+
+
+    /* -------------------- FOOTER -------------------- */
+    .footer {
+        padding: 1rem 0; /* default size, varies with viewport size */
+        height: auto; /* default size, varies with viewport size */
+    }
+    
+    .copyright {
+        font-size: 1rem; /* default size, varies with viewport size */
     }
 }
 
 
 
 
-/* CSS rules for medium and larger screen sizes, 601px and above */
-@media only screen and (min-width: 601px) {
+
+
+
+
+
+
+/* CSS rules for medium viewports, 576px to 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
     /* -------------------- REUSED COMPONENTS -------------------- */
     .content-title {
-        font-size: 4em;
-        width: fit-content;
-        margin: 2rem auto;
+        font-size: 3.5em; /* vary with viewport size */
+        margin: 1.5rem auto; /* vary with viewport size */
     }
 
     .content-box {
-        width: 60%;
-        margin: 0 auto;
-        border: 2px solid black;
+        width: 90%; /* vary with viewport size */
     }
+
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
-        width: 60%;
-        justify-content: space-between;
+        width: 90%; /* vary with viewport size */
+        justify-content: space-between; /* vary with viewport size */
     }
 
     .nav-links {
-        display: flex;
-        list-style-type: none;
+        display: flex; /* vary with viewport size */
     }
 
     .nav-link {
-        color: #D9C666;
-        font-weight: bold;
-        text-decoration: none;
-        margin: 0 10px;
-        font-size: large;
+        margin: 0 10px; /* vary with viewport size */
+        font-size: 1.1rem; /* vary with viewport size */
     }
 
     .nav-link:hover {
-        border-bottom: 2px solid #D9C666;
-        padding-bottom: 2px;
+        border-bottom: 2px solid #D9C666; /* vary with viewport size */
+        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
     }
+
 
     /* -------------------- LANDING PAGE -------------------- */
     .hero-image-sm {
@@ -364,67 +462,622 @@ ul {
 
     .hero-image-lg {
         display: block;
-        height: 92vh;
+        height: 93vh;
         width: 100%;
         object-fit: cover;
     }
 
     .hero-mask {
-        width: 60%;
-        left: 20%;
+        width: 90%; /* vary with viewport size */
+        left: calc(5% - 2px); /* vary with viewport size, -2px to account for border */ 
     }
 
-    .hero-text {
-        font-size: 1.2em;
+    .hero-text-1, .hero-text-2 {
+        font-size: 1.1em; /* vary with viewport size */
+        padding: 0 1rem; /* default size, varies with viewport size */
+    }
+    
+    .hero-text-1 {
+        margin-bottom: 5px;
+    }
+    
+    .hero-text-2 {
+        margin-top: 5px;
     }
 
-    .hero-buttons {
-        display: block;
-    }
 
     /* -------------------- SERVICES -------------------- */
     .service-container {
-        width: 60%;
-        height: 70vh;
+        width: 90%; /* vary with viewport size */
         display: flex;
         border: solid 2px black;
-        margin: 0 auto 3rem;
+        margin: 0 auto 2rem; /* vary with viewport size */
     }
 
     #service-menu {
-        width: 50%;
-        overflow: hidden;
+        width: 50%; /* vary with viewport size */
+        border: none; /* only on large screens where image is displayed */
     }
 
-    .service-category {
-        padding: 0.5rem 0 0.5rem 1rem;
-        margin-top: 1rem;
-    }
-
-    .service-name {
-        padding: 0.5rem 0 0.5rem 1rem;
+    .service-name, .service-price, .service-category {
+        padding: 0.5rem;
     }
     
-    .service-price {
-        padding: 0.5rem 1rem 0.5rem 0;
+    .service-category {
+        margin-top: 1rem; /* vary with viewport size */
     }
 
     .disclaimer {
-        display: flex;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    .disclaimer-icon {
-        padding: 0 0.4rem 0 1rem;
+        margin: 1rem 0 0; /* vary with viewport size */
     }
 
     .disclaimer-text {
+        padding-right: 0.5rem; /* vary with viewport size */
+    }
+
+    #service-photo-container {
+        display: flex;
+        width: 50%; /* vary with viewport size */
+        border-left: solid 2px black;
+    }
+
+    #service-photo {
+        object-fit: cover;
+        width: 100%;
+    }
+
+
+    /* -------------------- GALLERY -------------------- */
+    
+
+    
+
+    
+
+    /* -------------------- CONTACT -------------------- */
+    .contact-box {
+        display: flex;
+        flex-direction: row;
+        width: 90%; /* vary with viewport size */
+        /* height: 70vh; vary with viewport size */
+        margin: 0 auto 2rem;
+        font-size: 1em; /* vary with viewport size */
+    }
+
+    .contact-info, .contact-map {
+        width: 50%; /* vary with viewport size */
+    }
+
+    .contact-map {
+        height: inherit;
+        border-left: 2px solid black;
+        border-top: none;
+    }
+
+    .opening-day, .contact-icon {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+    }
+
+    .contact-info-text {
+        padding: 0.5rem; /* vary with viewport size */
+    }
+    
+    .opening-time {
+        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+    }
+
+
+    /* -------------------- FOOTER -------------------- */
+    .footer {
+        padding: 1rem 0; /* default size, varies with viewport size */
+        height: auto; /* default size, varies with viewport size */
+    }
+    
+    .copyright {
+        font-size: 1.5rem; /* default size, varies with viewport size */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS rules for large viewports, 768px to 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* -------------------- REUSED COMPONENTS -------------------- */
+    .content-title {
+        font-size: 3.5em; /* vary with viewport size */
+        margin: 2rem auto; /* vary with viewport size */
+    }
+
+    .content-box {
+        width: 80%; /* vary with viewport size */
+    }
+
+
+    /* -------------------- NAVBAR -------------------- */
+    .navbar {
+        width: 80%; /* vary with viewport size */
+        justify-content: space-between; /* vary with viewport size */
+    }
+
+    .brand-logo {
+        height: 2rem;
+    }
+
+    .nav-links {
+        display: flex; /* vary with viewport size */
+        /* list-style-type: none; */
+    }
+
+    .nav-link {
+        margin: 0 10px; /* vary with viewport size */
+        font-size: large; /* vary with viewport size */
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid #D9C666; /* vary with viewport size */
+        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
+    }
+
+
+    /* -------------------- LANDING PAGE -------------------- */
+    .hero-image-sm {
+        display: none;
+    }
+
+    .hero-image-lg {
+        display: block;
+        height: 93vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-mask {
+        width: 80%; /* vary with viewport size */
+        left: calc(10% - 2px); /* vary with viewport size, -2px to account for border */
+    }
+
+    .hero-text-1, .hero-text-2 {
+        font-size: 1.2em; /* vary with viewport size */
+        padding: 0 1rem; /* default size, varies with viewport size */
+    }
+    
+    .hero-text-1 {
+        margin-bottom: 5px;
+    }
+    
+    .hero-text-2 {
+        margin-top: 5px;
+    }
+
+
+    /* -------------------- SERVICES -------------------- */
+    .service-container {
+        width: 80%; /* vary with viewport size */
+        /* height: 70vh; vary with viewport size */
+        display: flex;
+        border: solid 2px black;
+        margin: 0 auto 3rem; /* vary with viewport size */
+    }
+
+    #service-menu {
+        width: 50%; /* vary with viewport size */
+        font-size: 1rem;
+        border: none; /* only on large screens where image is displayed */
+    }
+
+    .service-category {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+        margin-top: 1rem; /* vary with viewport size */
+    }
+
+    .service-name {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+    }
+    
+    .service-price {
+        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+    }
+
+    .disclaimer {
+        margin: 1rem 0 0; /* vary with viewport size */
+    }
+
+    .disclaimer-icon {
+        padding: 0 0.4rem 0 1rem; /* vary with viewport size */
+    }
+
+    .disclaimer-text {
+        padding-right: 1rem; /* vary with viewport size */
+    }
+
+    #service-photo-container {
+        display: flex;
+        height: inherit;
+        width: 50%; /* vary with viewport size */
+        border-left: solid 2px black;
+    }
+
+    #service-photo {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* -------------------- GALLERY -------------------- */
+    
+
+    
+
+    
+
+    /* -------------------- CONTACT -------------------- */
+    .contact-box {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3rem;
+        width: 80%; /* vary with viewport size */
+        /* height: 70vh; vary with viewport size */
+        font-size: 1.1em; /* vary with viewport size */
+    }
+
+    .contact-info, .contact-map {
+        width: 50%; /* vary with viewport size */
+    }
+
+    .contact-map {
+        border-left: 2px solid black;
+        height: inherit;
+        border-top: none; /* vary with viewport size */
+    }
+
+    .opening-day, .contact-icon {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+    }
+
+    .contact-info-text {
+        padding: 0.5rem; /* vary with viewport size */
+    }
+    
+    .opening-time {
+        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+    }
+
+
+    /* -------------------- FOOTER -------------------- */
+    .footer {
+        width: 80%;
+        padding: 1rem 0; /* default size, varies with viewport size */
+        height: auto; /* default size, varies with viewport size */
+    }
+    
+    .copyright {
+        font-size: 1.5rem; /* default size, varies with viewport size */
+    }
+
+    .footer-icon {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS rules for extra-large viewports, 992px to 1399px */
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+    /* -------------------- REUSED COMPONENTS -------------------- */
+    .content-title {
+        font-size: 4em; /* vary with viewport size */
+        margin: 2rem auto; /* vary with viewport size */
+    }
+
+    .content-box {
+        width: 70%; /* vary with viewport size */
+    }
+
+
+    /* -------------------- NAVBAR -------------------- */
+    .navbar {
+        width: 70%; /* vary with viewport size */
+        justify-content: space-between; /* vary with viewport size */
+    }
+
+    .brand-logo {
+        height: 2rem;
+    }
+
+    .nav-links {
+        display: flex; /* vary with viewport size */
+    }
+
+    .nav-link {
+        margin: 0 0.75em; /* vary with viewport size */
+        font-size: 1.2em; /* vary with viewport size */
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid #D9C666; /* vary with viewport size */
+        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
+    }
+
+
+    /* -------------------- LANDING PAGE -------------------- */
+    .hero-image-sm {
+        display: none;
+    }
+
+    .hero-image-lg {
+        display: block;
+        height: 93vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-mask {
+        width: 70%; /* vary with viewport size */
+        left: calc(15% - 2px); /* vary with viewport size, -2px to account for border */
+    }
+
+    .hero-text-1, .hero-text-2 {
+        font-size: 1.3em; /* vary with viewport size */
+        padding: 0 1.2rem; /* default size, varies with viewport size */
+    }
+    
+    .hero-text-1 {
+        margin-bottom: 0.5em;
+    }
+    
+    .hero-text-2 {
+        margin-top: 0.5em;
+    }
+
+
+    /* -------------------- SERVICES -------------------- */
+    .service-container {
+        width: 70%; /* vary with viewport size */
+        display: flex;
+        border: solid 2px black;
+        margin: 0 auto 3rem; /* vary with viewport size */
+    }
+
+    #service-menu {
+        width: 50%; /* vary with viewport size */
+        font-size: 1em;
+        border: none; /* only on large screens where image is displayed */
+    }
+
+    .service-category {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+        margin-top: 1rem; /* vary with viewport size */
+    }
+
+    .service-name {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+    }
+    
+    .service-price {
+        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+    }
+
+    .disclaimer {
+        margin: 1rem 0 0; /* vary with viewport size */
+    }
+
+    .disclaimer-icon {
+        padding: 0 0.4rem 0 1rem; /* vary with viewport size */
+    }
+
+    .disclaimer-text {
+        font-size: 0.9em;
+        padding-right: 1rem; /* vary with viewport size */
+    }
+
+    #service-photo-container {
+        display: flex;
+        height: inherit;
+        width: 50%; /* vary with viewport size */
+        border-left: solid 2px black;
+    }
+
+    #service-photo {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* -------------------- GALLERY -------------------- */
+    
+
+    
+
+    
+
+    /* -------------------- CONTACT -------------------- */
+    .contact-box {
+        display: flex;
+        flex-direction: row;
+        width: 70%; /* vary with viewport size */
+        font-size: 1.2em; /* vary with viewport size */
+        margin: 0 auto 3rem;
+    }
+
+    .contact-info, .contact-map {
+        width: 50%; /* vary with viewport size */
+    }
+
+    .contact-map {
+        border-left: 2px solid black; /* vary with viewport size */
+        border-top: none;
+        height: inherit;
+    }
+
+    .opening-day, .contact-icon {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+    }
+
+    .contact-info-text {
+        padding: 0.5rem; /* vary with viewport size */
+    }
+    
+    .opening-time {
+        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+    }
+
+
+    /* -------------------- FOOTER -------------------- */
+    .footer {
+        width: 70%;
+        padding: 1rem 0; /* default size, varies with viewport size */
+        height: auto; /* default size, varies with viewport size */
+    }
+    
+    .copyright {
+        font-size: 1.5rem; /* default size, varies with viewport size */
+    }
+
+    .footer-icon {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* CSS rules for ultra-wide viewports, 1400px and above */
+@media only screen and (min-width: 1400px) {
+    /* -------------------- REUSED COMPONENTS -------------------- */
+    .content-title {
+        font-size: 4em; /* vary with viewport size */
+        margin: 2rem auto; /* vary with viewport size */
+    }
+
+    .content-box {
+        width: 60%; /* vary with viewport size */
+    }
+
+
+    /* -------------------- NAVBAR -------------------- */
+    .navbar {
+        width: 60%; /* vary with viewport size */
+        justify-content: space-between; /* vary with viewport size */
+    }
+
+    .brand-logo {
+        height: 2.5rem;
+    }
+
+    .nav-links {
+        display: flex; /* vary with viewport size */
+        /* list-style-type: none; */
+    }
+
+    .nav-link {
+        margin: 0 1rem; /* vary with viewport size */
+        font-size: 1.3rem; /* vary with viewport size */
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid #D9C666; /* vary with viewport size */
+        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
+    }
+
+
+    /* -------------------- LANDING PAGE -------------------- */
+    .hero-image-sm {
+        display: none;
+    }
+
+    .hero-image-lg {
+        display: block;
+        height: 93vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-mask {
+        width: 60%; /* vary with viewport size */
+        left: calc(20% - 2px); /* vary with viewport size, -2px to account for border */
+    }
+
+    .hero-text-1, .hero-text-2 {
+        font-size: 1.3em; /* vary with viewport size */
+        padding: 0 1.2rem; /* default size, varies with viewport size */
+    }
+    
+    .hero-text-1 {
+        margin-bottom: 0.5em;
+    }
+    
+    .hero-text-2 {
+        margin-top: 0.5em;
+    }
+
+
+    /* -------------------- SERVICES -------------------- */
+    .service-container {
+        width: 60%; /* vary with viewport size */
+        max-height: 715px;
+        display: flex;
+        border: solid 2px black;
+        margin: 0 auto 4rem; /* vary with viewport size */
+    }
+
+    #service-menu {
+        width: 50%; /* vary with viewport size */
+        font-size: 1.2em;
+        margin: 0 auto 1rem;
+        border: none; /* only on large screens where image is displayed */
+    }
+
+    .service-category {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+        margin-top: 1rem; /* vary with viewport size */
+    }
+
+    .service-name {
+        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+    }
+    
+    .service-price {
+        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+    }
+
+    .disclaimer {
+        margin: 1rem 0 0; /* vary with viewport size */
+    }
+
+    .disclaimer-icon {
+        padding: 0 0.6rem 0 1rem; /* vary with viewport size */
+    }
+
+    .disclaimer-text {
+        font-size: 0.9em;
         padding-right: 1rem;
     }
 
     #service-photo-container {
-        /* display: flex; */
+        display: flex;
         height: inherit;
         width: 50%;
         border-left: solid 2px black;
@@ -436,39 +1089,21 @@ ul {
         height: 100%;
     }
 
+
     /* -------------------- GALLERY -------------------- */
-    #gallery {
-        display: flex;
-        flex-direction: column;
-    }
+    
 
-    .gallery-title {
-        height: fit-content;
-        margin: 2rem auto;
-    }
+    
 
-    .gallery-carousel {
-        display: block;
-        width: 60%;
-        height: 80vh;
-        margin: 0 auto;
-        border: 2px solid black;
-    }
-
-    .gallery-photo {
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-    }
+    
 
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         display: flex;
+        flex-direction: row;
+        margin: 0 auto 4rem;
         width: 60%;
-        height: 70vh;
         font-size: 1.2em;
-        margin: 0 auto;
-        border: 2px solid black;
     }
 
     .contact-info, .contact-map {
@@ -476,7 +1111,9 @@ ul {
     }
 
     .contact-map {
+        height: inherit;
         border-left: 2px solid black;
+        border-top: none;
     }
 
     .opening-day, .contact-icon {
@@ -490,4 +1127,20 @@ ul {
     .opening-time {
         padding: 0.5rem 1rem 0.5rem 0;
     }
-} 
+
+
+    /* -------------------- FOOTER -------------------- */
+    .footer {
+        width: 60%;
+        padding: 1rem 0;
+        height: auto;
+    }
+    
+    .copyright {
+        font-size: 1.5rem;
+    }
+
+    .footer-icon {
+        font-size: 1.5rem;
+    }
+}

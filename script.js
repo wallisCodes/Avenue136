@@ -1,3 +1,5 @@
+screen.orientation.lock("natural");
+
 function switchService(evt, serviceType) {
   var i, x, service_tabs;
   x = document.getElementsByClassName("services-list");
