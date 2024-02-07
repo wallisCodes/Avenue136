@@ -17,36 +17,41 @@ ul {
 
 /* -------------------- REUSED COMPONENTS -------------------- */
 .content-title {
-    font-size: 2.5rem; /* default value, varies with viewport size */
+    font-size: 2.5rem;
     width: fit-content;
-    margin: 0.5rem auto; /* default value, varies with viewport size */
+    margin: 0 auto 0.5rem;
 }
 
-.content-box {
-    font-size: 1rem;
-    width: 90%; /* default value, varies with viewport size */
-    margin: 0 auto;
-    border: 2px solid black;
+.section-gradient-1 {
+    background-image: linear-gradient(#D9C666, #F2EBC9);
+}
+
+.section-gradient-2 {
+    background-image: linear-gradient(#F2EBC9, #D9C666);
+}
+
+.section-gradient-1, .section-gradient-2 {
+    height: 2rem;
 }
 
 
 /* -------------------- NAVBAR -------------------- */
 .navbar {
     display: flex;
-    width: 90%; /* default value, varies with viewport size */
-    height: 7svh; /* default value, varies with viewport size */
-    justify-content: center; /* default value, varies with viewport size */
+    width: 90%;
+    height: 7svh;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     color: #D9C666;
 }
 
 .brand-logo {
-    height: 1.5rem; /* default value, varies with viewport size */
+    height: 1.5rem;
 }
 
 .nav-links {
-    display: none; /* default value, varies with viewport size */
+    display: none;
     list-style-type: none;
 }
 
@@ -64,32 +69,32 @@ ul {
 }
 
 .hero-image-sm {
-    display: block; /* vary with viewport size */
-    height: 93svh; /* min-height or height? */
+    display: block;
+    height: 93svh;
     width: 100%;
     object-fit: cover;
 }
 
 .hero-image-lg {
-    display: none; /* vary with viewport size */
+    display: none;
 }
 
 .hero-mask {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 90%; /* vary with viewport size */
-    left: calc(5% - 2px); /* vary with viewport size, -2px to account for border */
-    bottom: 3%; /* vary with viewport size */
+    width: 90%;
+    left: calc(5% - 2px); /* -2px to account for border */
+    bottom: 3%;
     background-color: rgba(0, 0, 0, 0.85);
     border: 2px solid #D9C666;
 }
 
 .hero-text-1, .hero-text-2 {
     color: #D9C666;
-    font-size: 0.9em; /* vary with viewport size */
+    font-size: 0.9em;
     text-align: center;
-    padding: 0 1rem; /* default size, varies with viewport size */
+    padding: 0 1rem;
 }
 
 .hero-text-1 {
@@ -105,14 +110,14 @@ ul {
 #services {
     display: flex;
     flex-direction: column;
-    /* min-height: 100vh; */
     background-color: #F2EBC9;
+    /* border-top: solid 2px #D9C666; */
 }
 
 #service-menu {
-    font-size: 0.9rem; /* vary with viewport size */
-    width: 90%; /* vary with viewport size */
-    margin: 0 auto 1rem;
+    font-size: 0.9rem;
+    width: 90%;
+    margin: 0 auto;
     border: 2px solid black;
 }
 
@@ -127,7 +132,6 @@ ul {
 .active-tab {
     background-color: #D9C666;
     font-weight: bold;
-    /* border-bottom: 2px solid black; */
 }
 
 .service-item, .service-item-alt {
@@ -141,37 +145,37 @@ ul {
 }
 
 .service-category {
-    padding: 0.5rem; /* vary with viewport size */
-    margin-top: 1rem; /* vary with viewport size */
+    padding: 0.5rem;
+    margin-top: 1rem;
 }
 
 .line-break {
-    width: 60%; /* default size, varies with viewport size */
-    margin-top: 1em; /* default size, varies with viewport size */
+    width: 60%;
+    margin-top: 1em;
 }
 
 .service-name, .service-price {
-    padding: 0.5rem; /* vary with viewport size */
+    padding: 0.5rem;
     font-weight: bold;
 }
 
 .disclaimer {
     display: flex;
     align-items: center;
-    margin: 1rem 0; /* vary with viewport size */
+    margin: 1rem 0;
 }
 
 .disclaimer-icon {
-    padding: 0.2rem 0.4rem 0 0.5rem; /* vary with viewport size */
+    padding: 0.2rem 0.4rem 0 0.5rem;
 }
 
 .disclaimer-text {
     font-size: 0.8em;
-    padding-right: 0.5rem; /* vary with viewport size */
+    padding-right: 0.5rem;
 }
 
 #service-photo-container {
-    display: none; /* vary with viewport size */
+    display: none;
 }
 
 
@@ -179,15 +183,19 @@ ul {
 #gallery {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: grey;
+    background-color: #D9C666;
+}
+
+.gallery-container {
+    font-size: 0; /* used to remove whitespace between images */
+    width: 90%;
+    border: solid 2px black;
+    margin: 0 auto;
 }
 
 .gallery-photo {
-    /* position: absolute; */
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 50%;
 }
 
 
@@ -195,16 +203,15 @@ ul {
 #contact {
     display: flex;
     flex-direction: column;
-    /* min-height: 100vh; */
-    background-color: #D9C666;
+    background-color: #F2EBC9;
 }
 
 .contact-box {
     display: flex;
-    flex-direction: column; /* vary with viewport size */
-    font-size: 0.9rem; /* vary with viewport size */
-    width: 90%; /* vary with viewport size */
-    margin: 0 auto 1rem;
+    flex-direction: column;
+    font-size: 0.9rem;
+    width: 90%;
+    margin: 0 auto;
     border: 2px solid black;
 }
 
@@ -213,7 +220,7 @@ ul {
 }
 
 .contact-info, .contact-map {
-    width: 100%; /* vary with viewport size */
+    width: 100%;
 }
 
 .contact-item, .contact-item-alt {
@@ -230,15 +237,15 @@ ul {
 }
 
 .contact-item-alt, .opening-times-alt {
-    background-color: #F2EBC9;
+    background-color: #D9C666;
 }
 
 .opening-day, .opening-time, .contact-icon {
-    padding: 0.5rem; /* vary with viewport size */
+    padding: 0.5rem;
 }
 
 .contact-map {
-    height: 35vh; /* vary with viewport size */
+    height: 35vh;
     border: none;
     border-top: 2px solid black;
 }
@@ -250,13 +257,13 @@ ul {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 7svh; /* default size, varies with viewport size */
+    height: 7svh;
     margin: 0 auto;
     color: #D9C666;
 }
 
 .copyright {
-    font-size: 1rem; /* default size, varies with viewport size */
+    font-size: 1rem;
 }
 
 .footer-icon {
@@ -264,57 +271,46 @@ ul {
 }
 
 
-
-
-
-
-
-
 /* CSS rules for small viewports, 360px to 575px */
 @media only screen and (min-width: 360px) and (max-width: 575px) {
     /* -------------------- REUSED COMPONENTS -------------------- */
     .content-title {
-        font-size: 3rem;/* vary with viewport size */
-        margin: 1rem auto; /* vary with viewport size */
-    }
-
-    .content-box {
-        font-size: 1.1rem;
-        width: 90%; /* vary with viewport size */
+        font-size: 3rem;
+        margin: 0 auto 1rem;
     }
 
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
-        width: 90%; /* vary with viewport size */
+        width: 90%;
     }
 
     .brand-logo {
-        height: 2rem; /* vary with viewport size */
+        height: 2rem;
     }
 
     .nav-links {
-        display: none; /* vary with viewport size */
+        display: none;
     }
 
 
     /* -------------------- LANDING PAGE -------------------- */
     .hero-image-sm {
-        display: block; /* vary with viewport size */
+        display: block;
     }
 
     .hero-image-lg {
-        display: none; /* vary with viewport size */
+        display: none;
     }
 
     .hero-mask {
-        width: 90%; /* vary with viewport size */
-        left: calc(5% - 2px); /* vary with viewport size, -2px to account for border */
+        width: 90%;
+        left: calc(5% - 2px);
     }
 
     .hero-text-1, .hero-text-2 {
-        font-size: 1em; /* vary with viewport size */
-        padding: 0 1rem; /* default size, varies with viewport size */
+        font-size: 1em;
+        padding: 0 1rem;
     }
     
     .hero-text-1 {
@@ -327,131 +323,104 @@ ul {
 
 
     /* -------------------- SERVICES -------------------- */
-    .service-title {
-        margin: 1rem auto; /* vary with viewport size */
-    }
-
     #service-menu {
-        font-size: 1rem; /* vary with viewport size */
-        width: 90%; /* vary with viewport size */
+        font-size: 1rem;
+        width: 90%;
     }
-
-    /* .service-btn-ladies, .service-btn-gents-juniors { */
-        /* font-size: 1.1em;  */
-        /* padding: 0.3em 0.6em;  */
-        /* margin: 0.25em 0 0 0.25em;  */
-        
-    /* } */
 
     .service-category {
-        padding: 0.5rem; /* vary with viewport size */
-        margin-top: 1rem; /* vary with viewport size */
+        padding: 0.5rem;
+        margin-top: 1rem;
     }
 
     .service-name, .service-price {
-        padding: 0.5rem; /* vary with viewport size */
+        padding: 0.5rem;
     }
 
     .disclaimer {
-        margin-top: 1rem; /* vary with viewport size */
+        margin-top: 1rem;
     }
 
     .disclaimer-icon {
-        padding: 0.4rem 0.5rem 0 0.5rem; /* vary with viewport size */
+        padding: 0.4rem 0.5rem 0 0.5rem;
     }
 
     .disclaimer-text {
         font-size: 1rem;
-        padding-right: 0.5rem; /* vary with viewport size */
+        padding-right: 0.5rem;
     }
 
     #service-photo-container {
-        display: none; /* vary with viewport size */
+        display: none;
     }
 
 
     /* -------------------- GALLERY -------------------- */
-    .gallery-title {
-        margin: 0 auto 1rem; /* vary with viewport size */
-        padding-top: 1rem; /* vary with viewport size */
-    }
-
-    .gallery-content {
-        width: 90%; /* vary with viewport size */
-        height: 80vh; /* vary with viewport size */
-    }
+    
 
 
     /* -------------------- CONTACT -------------------- */
     .contact-box {
-        font-size: 1rem; /* vary with viewport size */
-        width: 90%; /* vary with viewport size */
+        font-size: 1rem;
+        width: 90%;
     }
 
     .contact-info, .contact-map {
-        width: 100%; /* vary with viewport size */
+        width: 100%;
     }
 
     .contact-map {
-        height: 35vh; /* vary with viewport size */
+        height: 35vh;
     }
 
     .opening-day, .opening-time, .contact-icon {
-        padding: 0.5rem 0.3rem 0.5rem 0.5rem; /* vary with viewport size */
+        padding: 0.5rem 0.3rem 0.5rem 0.5rem;
     }
 
 
     /* -------------------- FOOTER -------------------- */
     .footer {
-        padding: 1rem 0; /* default size, varies with viewport size */
-        height: auto; /* default size, varies with viewport size */
+        padding: 1rem 0;
+        height: auto;
     }
     
     .copyright {
-        font-size: 1rem; /* default size, varies with viewport size */
+        font-size: 1rem;
     }
 }
-
-
-
-
-
-
-
-
 
 
 /* CSS rules for medium viewports, 576px to 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     /* -------------------- REUSED COMPONENTS -------------------- */
     .content-title {
-        font-size: 3.5em; /* vary with viewport size */
-        margin: 1.5rem auto; /* vary with viewport size */
+        font-size: 3.5em;
+        margin: 0 auto 1.5rem;
     }
 
-    .content-box {
-        width: 90%; /* vary with viewport size */
+    .section-gradient-1, .section-gradient-2 {
+        height: 4rem;
     }
 
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
-        width: 90%; /* vary with viewport size */
-        justify-content: space-between; /* vary with viewport size */
+        width: 90%;
+        justify-content: space-between;
     }
 
     .nav-links {
-        display: flex; /* vary with viewport size */
+        display: flex;
     }
 
     .nav-link {
-        margin: 0 10px; /* vary with viewport size */
-        font-size: 1.1rem; /* vary with viewport size */
+        margin: 0 10px;
+        font-size: 1.1rem;
     }
 
     .nav-link:hover {
-        border-bottom: 2px solid #D9C666; /* vary with viewport size */
-        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
+        border-bottom: 2px solid #D9C666;
+        padding-bottom: 2px;
     }
 
 
@@ -468,13 +437,13 @@ ul {
     }
 
     .hero-mask {
-        width: 90%; /* vary with viewport size */
-        left: calc(5% - 2px); /* vary with viewport size, -2px to account for border */ 
+        width: 90%;
+        left: calc(5% - 2px);
     }
 
     .hero-text-1, .hero-text-2 {
-        font-size: 1.1em; /* vary with viewport size */
-        padding: 0 1rem; /* default size, varies with viewport size */
+        font-size: 1.1em;
+        padding: 0 1rem;
     }
     
     .hero-text-1 {
@@ -488,15 +457,15 @@ ul {
 
     /* -------------------- SERVICES -------------------- */
     .service-container {
-        width: 90%; /* vary with viewport size */
+        width: 90%;
         display: flex;
         border: solid 2px black;
-        margin: 0 auto 2rem; /* vary with viewport size */
+        margin: 0 auto;
     }
 
     #service-menu {
-        width: 50%; /* vary with viewport size */
-        border: none; /* only on large screens where image is displayed */
+        width: 50%;
+        border: none;
     }
 
     .service-name, .service-price, .service-category {
@@ -504,20 +473,20 @@ ul {
     }
     
     .service-category {
-        margin-top: 1rem; /* vary with viewport size */
+        margin-top: 1rem;
     }
 
     .disclaimer {
-        margin: 1rem 0 0; /* vary with viewport size */
+        margin: 1rem 0;
     }
 
     .disclaimer-text {
-        padding-right: 0.5rem; /* vary with viewport size */
+        padding-right: 0.5rem;
     }
 
     #service-photo-container {
         display: flex;
-        width: 50%; /* vary with viewport size */
+        width: 50%;
         border-left: solid 2px black;
     }
 
@@ -528,24 +497,26 @@ ul {
 
 
     /* -------------------- GALLERY -------------------- */
+    .gallery-container {
+        margin: 0 auto;
+    }
     
-
-    
-
+    .gallery-photo {
+        width: calc(100% / 3);
+    }
     
 
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         display: flex;
         flex-direction: row;
-        width: 90%; /* vary with viewport size */
-        /* height: 70vh; vary with viewport size */
-        margin: 0 auto 2rem;
-        font-size: 1em; /* vary with viewport size */
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1em;
     }
 
     .contact-info, .contact-map {
-        width: 50%; /* vary with viewport size */
+        width: 50%;
     }
 
     .contact-map {
@@ -555,56 +526,47 @@ ul {
     }
 
     .opening-day, .contact-icon {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+        padding: 0.5rem 0 0.5rem 1rem;
     }
 
     .contact-info-text {
-        padding: 0.5rem; /* vary with viewport size */
+        padding: 0.5rem;
     }
     
     .opening-time {
-        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+        padding: 0.5rem 1rem 0.5rem 0;
     }
 
 
     /* -------------------- FOOTER -------------------- */
     .footer {
-        padding: 1rem 0; /* default size, varies with viewport size */
-        height: auto; /* default size, varies with viewport size */
+        padding: 1rem 0;
+        height: auto;
     }
     
     .copyright {
-        font-size: 1.5rem; /* default size, varies with viewport size */
+        font-size: 1.5rem;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 /* CSS rules for large viewports, 768px to 991px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     /* -------------------- REUSED COMPONENTS -------------------- */
     .content-title {
-        font-size: 3.5em; /* vary with viewport size */
-        margin: 2rem auto; /* vary with viewport size */
+        font-size: 3.5em;
+        margin: 0 auto 2rem;
     }
 
-    .content-box {
-        width: 80%; /* vary with viewport size */
+    .section-gradient-1, .section-gradient-2 {
+        height: 4rem;
     }
 
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
-        width: 80%; /* vary with viewport size */
-        justify-content: space-between; /* vary with viewport size */
+        width: 80%;
+        justify-content: space-between;
     }
 
     .brand-logo {
@@ -612,18 +574,17 @@ ul {
     }
 
     .nav-links {
-        display: flex; /* vary with viewport size */
-        /* list-style-type: none; */
+        display: flex;
     }
 
     .nav-link {
-        margin: 0 10px; /* vary with viewport size */
-        font-size: large; /* vary with viewport size */
+        margin: 0 10px;
+        font-size: large;
     }
 
     .nav-link:hover {
-        border-bottom: 2px solid #D9C666; /* vary with viewport size */
-        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
+        border-bottom: 2px solid #D9C666;
+        padding-bottom: 2px;
     }
 
 
@@ -640,13 +601,13 @@ ul {
     }
 
     .hero-mask {
-        width: 80%; /* vary with viewport size */
-        left: calc(10% - 2px); /* vary with viewport size, -2px to account for border */
+        width: 80%;
+        left: calc(10% - 2px);
     }
 
     .hero-text-1, .hero-text-2 {
-        font-size: 1.2em; /* vary with viewport size */
-        padding: 0 1rem; /* default size, varies with viewport size */
+        font-size: 1.2em;
+        padding: 0 1rem;
     }
     
     .hero-text-1 {
@@ -660,48 +621,47 @@ ul {
 
     /* -------------------- SERVICES -------------------- */
     .service-container {
-        width: 80%; /* vary with viewport size */
-        /* height: 70vh; vary with viewport size */
+        width: 80%;
         display: flex;
         border: solid 2px black;
-        margin: 0 auto 3rem; /* vary with viewport size */
+        margin: 0 auto;
     }
 
     #service-menu {
-        width: 50%; /* vary with viewport size */
+        width: 50%;
         font-size: 1rem;
-        border: none; /* only on large screens where image is displayed */
+        border: none;
     }
 
     .service-category {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
-        margin-top: 1rem; /* vary with viewport size */
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin-top: 1rem;
     }
 
     .service-name {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+        padding: 0.5rem 0 0.5rem 1rem;
     }
     
     .service-price {
-        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+        padding: 0.5rem 1rem 0.5rem 0;
     }
 
     .disclaimer {
-        margin: 1rem 0 0; /* vary with viewport size */
+        margin: 1rem 0;
     }
 
     .disclaimer-icon {
-        padding: 0 0.4rem 0 1rem; /* vary with viewport size */
+        padding: 0 0.4rem 0 1rem;
     }
 
     .disclaimer-text {
-        padding-right: 1rem; /* vary with viewport size */
+        padding-right: 1rem;
     }
 
     #service-photo-container {
         display: flex;
         height: inherit;
-        width: 50%; /* vary with viewport size */
+        width: 50%;
         border-left: solid 2px black;
     }
 
@@ -713,54 +673,57 @@ ul {
 
 
     /* -------------------- GALLERY -------------------- */
+    .gallery-container {
+        width: 80%;
+        margin: 0 auto;
+    }
     
-
-    
-
+    .gallery-photo {
+        width: calc(100% / 3);
+    }
     
 
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         display: flex;
         flex-direction: row;
-        margin-bottom: 3rem;
-        width: 80%; /* vary with viewport size */
-        /* height: 70vh; vary with viewport size */
-        font-size: 1.1em; /* vary with viewport size */
+        margin-bottom: 0;
+        width: 80%;
+        font-size: 1.1em;
     }
 
     .contact-info, .contact-map {
-        width: 50%; /* vary with viewport size */
+        width: 50%;
     }
 
     .contact-map {
         border-left: 2px solid black;
         height: inherit;
-        border-top: none; /* vary with viewport size */
+        border-top: none;
     }
 
     .opening-day, .contact-icon {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+        padding: 0.5rem 0 0.5rem 1rem;
     }
 
     .contact-info-text {
-        padding: 0.5rem; /* vary with viewport size */
+        padding: 0.5rem;
     }
     
     .opening-time {
-        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+        padding: 0.5rem 1rem 0.5rem 0;
     }
 
 
     /* -------------------- FOOTER -------------------- */
     .footer {
         width: 80%;
-        padding: 1rem 0; /* default size, varies with viewport size */
-        height: auto; /* default size, varies with viewport size */
+        padding: 1rem 0;
+        height: auto;
     }
     
     .copyright {
-        font-size: 1.5rem; /* default size, varies with viewport size */
+        font-size: 1.4rem;
     }
 
     .footer-icon {
@@ -769,32 +732,23 @@ ul {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* CSS rules for extra-large viewports, 992px to 1399px */
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
     /* -------------------- REUSED COMPONENTS -------------------- */
     .content-title {
-        font-size: 4em; /* vary with viewport size */
-        margin: 2rem auto; /* vary with viewport size */
+        font-size: 4em;
+        margin: 0 auto 2rem;
     }
 
-    .content-box {
-        width: 70%; /* vary with viewport size */
+    .section-gradient-1, .section-gradient-2 {
+        height: 4rem;
     }
 
 
     /* -------------------- NAVBAR -------------------- */
     .navbar {
-        width: 70%; /* vary with viewport size */
-        justify-content: space-between; /* vary with viewport size */
+        width: 70%;
+        justify-content: space-between;
     }
 
     .brand-logo {
@@ -802,273 +756,84 @@ ul {
     }
 
     .nav-links {
-        display: flex; /* vary with viewport size */
+        display: flex;
     }
 
     .nav-link {
-        margin: 0 0.75em; /* vary with viewport size */
-        font-size: 1.2em; /* vary with viewport size */
-    }
-
-    .nav-link:hover {
-        border-bottom: 2px solid #D9C666; /* vary with viewport size */
-        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
-    }
-
-
-    /* -------------------- LANDING PAGE -------------------- */
-    .hero-image-sm {
-        display: none;
-    }
-
-    .hero-image-lg {
-        display: block;
-        height: 93vh;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .hero-mask {
-        width: 70%; /* vary with viewport size */
-        left: calc(15% - 2px); /* vary with viewport size, -2px to account for border */
-    }
-
-    .hero-text-1, .hero-text-2 {
-        font-size: 1.3em; /* vary with viewport size */
-        padding: 0 1.2rem; /* default size, varies with viewport size */
-    }
-    
-    .hero-text-1 {
-        margin-bottom: 0.5em;
-    }
-    
-    .hero-text-2 {
-        margin-top: 0.5em;
-    }
-
-
-    /* -------------------- SERVICES -------------------- */
-    .service-container {
-        width: 70%; /* vary with viewport size */
-        display: flex;
-        border: solid 2px black;
-        margin: 0 auto 3rem; /* vary with viewport size */
-    }
-
-    #service-menu {
-        width: 50%; /* vary with viewport size */
-        font-size: 1em;
-        border: none; /* only on large screens where image is displayed */
-    }
-
-    .service-category {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
-        margin-top: 1rem; /* vary with viewport size */
-    }
-
-    .service-name {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
-    }
-    
-    .service-price {
-        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
-    }
-
-    .disclaimer {
-        margin: 1rem 0 0; /* vary with viewport size */
-    }
-
-    .disclaimer-icon {
-        padding: 0 0.4rem 0 1rem; /* vary with viewport size */
-    }
-
-    .disclaimer-text {
-        font-size: 0.9em;
-        padding-right: 1rem; /* vary with viewport size */
-    }
-
-    #service-photo-container {
-        display: flex;
-        height: inherit;
-        width: 50%; /* vary with viewport size */
-        border-left: solid 2px black;
-    }
-
-    #service-photo {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-
-    /* -------------------- GALLERY -------------------- */
-    
-
-    
-
-    
-
-    /* -------------------- CONTACT -------------------- */
-    .contact-box {
-        display: flex;
-        flex-direction: row;
-        width: 70%; /* vary with viewport size */
-        font-size: 1.2em; /* vary with viewport size */
-        margin: 0 auto 3rem;
-    }
-
-    .contact-info, .contact-map {
-        width: 50%; /* vary with viewport size */
-    }
-
-    .contact-map {
-        border-left: 2px solid black; /* vary with viewport size */
-        border-top: none;
-        height: inherit;
-    }
-
-    .opening-day, .contact-icon {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
-    }
-
-    .contact-info-text {
-        padding: 0.5rem; /* vary with viewport size */
-    }
-    
-    .opening-time {
-        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
-    }
-
-
-    /* -------------------- FOOTER -------------------- */
-    .footer {
-        width: 70%;
-        padding: 1rem 0; /* default size, varies with viewport size */
-        height: auto; /* default size, varies with viewport size */
-    }
-    
-    .copyright {
-        font-size: 1.5rem; /* default size, varies with viewport size */
-    }
-
-    .footer-icon {
-        font-size: 1.4rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-/* CSS rules for ultra-wide viewports, 1400px and above */
-@media only screen and (min-width: 1400px) {
-    /* -------------------- REUSED COMPONENTS -------------------- */
-    .content-title {
-        font-size: 4em; /* vary with viewport size */
-        margin: 2rem auto; /* vary with viewport size */
-    }
-
-    .content-box {
-        width: 60%; /* vary with viewport size */
-    }
-
-
-    /* -------------------- NAVBAR -------------------- */
-    .navbar {
-        width: 60%; /* vary with viewport size */
-        justify-content: space-between; /* vary with viewport size */
-    }
-
-    .brand-logo {
-        height: 2.5rem;
-    }
-
-    .nav-links {
-        display: flex; /* vary with viewport size */
-        /* list-style-type: none; */
-    }
-
-    .nav-link {
-        margin: 0 1rem; /* vary with viewport size */
-        font-size: 1.3rem; /* vary with viewport size */
-    }
-
-    .nav-link:hover {
-        border-bottom: 2px solid #D9C666; /* vary with viewport size */
-        padding-bottom: 2px; /* change to text-decoration */ /* vary with viewport size */
-    }
-
-
-    /* -------------------- LANDING PAGE -------------------- */
-    .hero-image-sm {
-        display: none;
-    }
-
-    .hero-image-lg {
-        display: block;
-        height: 93vh;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .hero-mask {
-        width: 60%; /* vary with viewport size */
-        left: calc(20% - 2px); /* vary with viewport size, -2px to account for border */
-    }
-
-    .hero-text-1, .hero-text-2 {
-        font-size: 1.3em; /* vary with viewport size */
-        padding: 0 1.2rem; /* default size, varies with viewport size */
-    }
-    
-    .hero-text-1 {
-        margin-bottom: 0.5em;
-    }
-    
-    .hero-text-2 {
-        margin-top: 0.5em;
-    }
-
-
-    /* -------------------- SERVICES -------------------- */
-    .service-container {
-        width: 60%; /* vary with viewport size */
-        max-height: 715px;
-        display: flex;
-        border: solid 2px black;
-        margin: 0 auto 4rem; /* vary with viewport size */
-    }
-
-    #service-menu {
-        width: 50%; /* vary with viewport size */
+        margin: 0 0.75em;
         font-size: 1.2em;
-        margin: 0 auto 1rem;
-        border: none; /* only on large screens where image is displayed */
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid #D9C666;
+        padding-bottom: 2px;
+    }
+
+
+    /* -------------------- LANDING PAGE -------------------- */
+    .hero-image-sm {
+        display: none;
+    }
+
+    .hero-image-lg {
+        display: block;
+        height: 93vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-mask {
+        width: 70%;
+        left: calc(15% - 2px);
+    }
+
+    .hero-text-1, .hero-text-2 {
+        font-size: 1.3em;
+        padding: 0 1.2rem;
+    }
+    
+    .hero-text-1 {
+        margin-bottom: 0.5em;
+    }
+    
+    .hero-text-2 {
+        margin-top: 0.5em;
+    }
+
+
+    /* -------------------- SERVICES -------------------- */
+    .service-container {
+        width: 70%;
+        display: flex;
+        border: solid 2px black;
+        margin: 0 auto;
+    }
+
+    #service-menu {
+        width: 50%;
+        font-size: 1em;
+        border: none;
     }
 
     .service-category {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
-        margin-top: 1rem; /* vary with viewport size */
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin-top: 1rem;
     }
 
     .service-name {
-        padding: 0.5rem 0 0.5rem 1rem; /* vary with viewport size */
+        padding: 0.5rem 0 0.5rem 1rem;
     }
     
     .service-price {
-        padding: 0.5rem 1rem 0.5rem 0; /* vary with viewport size */
+        padding: 0.5rem 1rem 0.5rem 0;
     }
 
     .disclaimer {
-        margin: 1rem 0 0; /* vary with viewport size */
+        margin: 1rem 0;
     }
 
     .disclaimer-icon {
-        padding: 0 0.6rem 0 1rem; /* vary with viewport size */
+        padding: 0 0.4rem 0 1rem;
     }
 
     .disclaimer-text {
@@ -1091,17 +856,206 @@ ul {
 
 
     /* -------------------- GALLERY -------------------- */
+    .gallery-container {
+        width: 70%;
+        margin: 0 auto;
+    }
     
+    .gallery-photo {
+        width: calc(100% / 3);
+    }
 
+
+    /* -------------------- CONTACT -------------------- */
+    .contact-box {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        font-size: 1.2em;
+        margin: 0 auto;
+    }
+
+    .contact-info, .contact-map {
+        width: 50%;
+    }
+
+    .contact-map {
+        border-left: 2px solid black;
+        border-top: none;
+        height: inherit;
+    }
+
+    .opening-day, .contact-icon {
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+
+    .contact-info-text {
+        padding: 0.5rem;
+    }
     
+    .opening-time {
+        padding: 0.5rem 1rem 0.5rem 0;
+    }
 
+
+    /* -------------------- FOOTER -------------------- */
+    .footer {
+        width: 70%;
+        padding: 1rem 0;
+        height: auto;
+    }
+    
+    .copyright {
+        font-size: 1.5rem;
+    }
+
+    .footer-icon {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* CSS rules for ultra-wide viewports, 1400px and above */
+@media only screen and (min-width: 1400px) {
+    /* -------------------- REUSED COMPONENTS -------------------- */
+    .content-title {
+        font-size: 4em;
+        margin: 0 auto 2rem;
+    }
+
+    .section-gradient-1, .section-gradient-2 {
+        height: 6rem;
+    }
+
+
+    /* -------------------- NAVBAR -------------------- */
+    .navbar {
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .brand-logo {
+        height: 2.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-link {
+        margin: 0 1rem;
+        font-size: 1.3rem;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid #D9C666;
+        padding-bottom: 2px;
+    }
+
+
+    /* -------------------- LANDING PAGE -------------------- */
+    .hero-image-sm {
+        display: none;
+    }
+
+    .hero-image-lg {
+        display: block;
+        height: 93vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-mask {
+        width: 60%;
+        left: calc(20% - 2px);
+    }
+
+    .hero-text-1, .hero-text-2 {
+        font-size: 1.3em;
+        padding: 0 1.2rem;
+    }
+    
+    .hero-text-1 {
+        margin-bottom: 0.5em;
+    }
+    
+    .hero-text-2 {
+        margin-top: 0.5em;
+    }
+
+
+    /* -------------------- SERVICES -------------------- */
+    .service-container {
+        width: 60%;
+        max-height: 715px;
+        display: flex;
+        border: solid 2px black;
+        margin: 0 auto;
+    }
+
+    #service-menu {
+        width: 50%;
+        font-size: 1.2em;
+        margin: 0 auto 1rem;
+        border: none;
+    }
+
+    .service-category {
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .service-name {
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+    
+    .service-price {
+        padding: 0.5rem 1rem 0.5rem 0;
+    }
+
+    .disclaimer {
+        margin: 1rem 0 0;
+    }
+
+    .disclaimer-icon {
+        padding: 0 0.6rem 0 1rem;
+    }
+
+    .disclaimer-text {
+        font-size: 0.9em;
+        padding-right: 1rem;
+    }
+
+    #service-photo-container {
+        display: flex;
+        height: inherit;
+        width: 50%;
+        border-left: solid 2px black;
+    }
+
+    #service-photo {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* -------------------- GALLERY -------------------- */
+    .gallery-container {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .gallery-photo {
+        width: calc(100% / 3);
+    }
     
 
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         display: flex;
         flex-direction: row;
-        margin: 0 auto 4rem;
+        margin: 0 auto;
         width: 60%;
         font-size: 1.2em;
     }
