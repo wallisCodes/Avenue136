@@ -244,6 +244,10 @@ ul {
     padding: 0.5rem;
 }
 
+.current-day {
+    border: 2px dashed black;
+}
+
 .contact-map {
     height: 35vh;
     border: none;
