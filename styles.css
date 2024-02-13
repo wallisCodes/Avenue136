@@ -61,10 +61,11 @@ button:hover {
 
 .hamburger-button {
     position: absolute;
-    right: calc(5vw - 2px);
+    right: 5vw;
     background-color: transparent;
     border: 2px solid #D9C666;
     z-index: 1000;
+    text-align: center;
     width: 2rem;
     aspect-ratio: 1;
     color: #D9C666;
@@ -227,20 +228,48 @@ button:hover {
 /* -------------------- Gallery -------------------- */
 #gallery {
     display: flex;
+    /* min-height: 100vh; */
     flex-direction: column;
     background-color: #D9C666;
 }
 
-.gallery-container {
+#gallery-container {
+    display: flex;
+    /* align-content: center; */
     font-size: 0; /* used to remove whitespace between images */
     width: 90%;
     border: solid 2px black;
     margin: 0 auto;
 }
 
-.gallery-photo {
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    background-color: black;
+    /* background-color: #D9C666; */
+    /* background-color: rgba(0, 0, 0, 1); */
+}
+
+.prev-btn, .next-btn {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    color: #D9C666;
+    /* color: black; */
+}
+
+.gallery-img {
+    display: none;
     object-fit: cover;
-    width: 50%;
+    width: 80%;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+}
+
+.active-img {
+    display: block;
+    transform: translateX(0%);
 }
 
 

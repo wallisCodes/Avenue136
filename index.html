@@ -21,7 +21,6 @@
         
         <button aria-expanded="false" class="hamburger-button">
             <i class="fa-solid fa-bars fa-xl open-nav"></i>
-            <!-- <i class="fa-solid fa-xmark fa-xl close-nav" style="display: none"></i> -->
             <i class="fa-solid fa-scissors fa-rotate-270 fa-xl close-nav" style="display: none"></i>
         </button>
 
@@ -43,7 +42,6 @@
     <div class="hero-container">
         <img class="hero-image-sm" src="assets/img/interior-2-9x16-92vh.jpeg" alt="">
         <img class="hero-image-lg" src="assets/img/interior-landscape-7.jpeg" alt="">
-        <!-- <img class="hero-image-lg" src="assets/img/interior-1-cropped.jpeg" alt=""> -->
 
         <div class="hero-mask">
             <p class="hero-text-1">Welcome to Avenue136, a brand new unisex hair salon in the heart of Bridgend!</p>
@@ -167,13 +165,22 @@
     <section id="gallery">
         <div class="content-title">Gallery</div>
 
-        <div class="gallery-container">
-            <img class="gallery-photo" src="assets/img/haircut-2.jpeg" alt="">
-            <img class="gallery-photo" src="assets/img/haircut-3.jpeg" alt="">
-            <img class="gallery-photo" src="assets/img/haircut-4.jpeg" alt="">
-            <img class="gallery-photo" src="assets/img/haircut-5.jpeg" alt="">
-            <img class="gallery-photo" src="assets/img/haircut-2.jpeg" alt=""> <!-- waiting on more photos to be sent over -->
-            <img class="gallery-photo" src="assets/img/haircut-3.jpeg" alt=""> <!-- waiting on more photos to be sent over -->               
+        <div id="gallery-container">
+            <div class="carousel-controls">
+                <button class="prev-btn" onclick="prevImage()">
+                    <i class="fa-solid fa-chevron-left fa-2xl"></i>
+                </button>
+            </div>
+
+            <img class="gallery-img active-img" src="assets/img/haircut-4-cropped.jpeg" alt="">
+            <img class="gallery-img" src="assets/img/haircut-5-cropped.jpeg" alt="">
+            <img class="gallery-img" src="assets/img/haircut-3-cropped.jpeg" alt="">
+            
+            <div class="carousel-controls">
+                <button class="next-btn" onclick="nextImage()">
+                    <i class="fa-solid fa-chevron-right fa-2xl"></i>
+                </button>
+            </div>
         </div>
     </section>
 

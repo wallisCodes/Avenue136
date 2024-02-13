@@ -64,15 +64,15 @@ hamburgerButton.addEventListener("click", (event) => {
 // =============== SERVICES ===============
 // Function to switch the display between the two service menus via the service tabs
 function switchService(evt, serviceType) {
-  var i, x, service_tabs;
+  var i, x, serviceTabs;
   x = document.getElementsByClassName("services-list");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
 
-  service_tabs = document.getElementsByClassName("service-tab");
+  serviceTabs = document.getElementsByClassName("service-tab");
   for (i = 0; i < x.length; i++) {
-    service_tabs[i].className = service_tabs[i].className.replace(" active-tab", "");
+    serviceTabs[i].className = serviceTabs[i].className.replace(" active-tab", "");
   }
   document.getElementById(serviceType).style.display = "block";
   evt.currentTarget.className += " active-tab";
@@ -80,20 +80,80 @@ function switchService(evt, serviceType) {
 
 
 
+// =============== GALLERY ===============
+const prevButton = document.querySelector("prev-btn");
+const nextButton = document.querySelector("next-btn");
+const galleryContainer = document.getElementById("gallery-container");
+const galleryImages = document.getElementsByClassName("gallery-img");
+
+var imageIndex = 0; // Keep track of currently displayed image
+
+function prevImage() {
+  imageIndex -= 1;
+
+  for (i = 0; i < galleryImages.length; i++) {
+    galleryImages[i].className = galleryImages[i].className.replace(" active-img", "");
+  }
+
+  if (imageIndex < 0) {
+    imageIndex = galleryImages.length - 1;
+  }
+  galleryImages[imageIndex].className += " active-img";
+}
+
+function nextImage() {
+  imageIndex += 1;
+
+  for (i = 0; i < galleryImages.length; i++) {
+    galleryImages[i].className = galleryImages[i].className.replace(" active-img", "");
+  }
+
+  if (imageIndex >= galleryImages.length) {
+    imageIndex = 0;
+  }
+  galleryImages[imageIndex].className += " active-img";
+}
+
+
+// Detecting horizontal swipes to navigate images
+var touchstartX = 0
+var touchendX = 0
+const swipeThreshold = 20;
+    
+function checkDirection() {
+  if (touchendX < touchstartX) {
+    nextImage(); //swipe left
+  } else if (touchendX > touchstartX) {
+    prevImage();
+  } 
+}
+
+galleryContainer.addEventListener('touchstart', event => {
+  // Attempting to only register the swipe if swiping inside the gallery-container
+  touchstartX = event.changedTouches[0].screenX;
+})
+
+galleryContainer.addEventListener('touchend', event => {
+    touchendX = event.changedTouches[0].screenX;
+    checkDirection();
+})
+
+
+
 // =============== CONTACT ===============
 // Retrieving current week day to highlight it on the opening times info
 const date = new Date();
-day_index = date.getDay();
+dayIndex = date.getDay();
 
-var i, opening_times;
-opening_times = document.getElementsByClassName("opening-info");
-for (i = 0; i < opening_times.length; i++) {
-  opening_times[i].className = opening_times[i].className.replace(" current-day", "");
+var i, openingTimes;
+openingTimes = document.getElementsByClassName("opening-info");
+for (i = 0; i < openingTimes.length; i++) {
+  openingTimes[i].className = openingTimes[i].className.replace(" current-day", "");
 }
 
-// Workaround for mismatched indices (Sunday [0] in Date() object vs. Sunday [6] in opening_times object)
-if (day_index == 0) {
-  day_index = 7;
+// Workaround for mismatched indices (Sunday [0] in Date() object vs. Sunday [6] in openingTimes object)
+if (dayIndex == 0) {
+  dayIndex = 7;
 }
 
-opening_times[day_index - 1].className += " current-day";
+openingTimes[dayIndex - 1].className += " current-day";
