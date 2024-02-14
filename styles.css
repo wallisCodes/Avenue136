@@ -19,6 +19,11 @@ ul {
     margin: 0;
 }
 
+/* i {
+    padding: 0;
+    margin: 0;
+} */
+
 button:hover {
     cursor: pointer;
 }
@@ -61,14 +66,21 @@ button:hover {
 
 .hamburger-button {
     position: absolute;
-    right: 5vw;
+    right: calc(5vw - 2px);
     background-color: transparent;
     border: 2px solid #D9C666;
     z-index: 1000;
-    text-align: center;
     width: 2rem;
     aspect-ratio: 1;
     color: #D9C666;
+}
+
+.open-nav, .close-nav {
+    text-align: center;
+}
+
+.close-nav {
+    padding: 0 1.25px;
 }
 
 .primary-navigation {
@@ -228,48 +240,80 @@ button:hover {
 /* -------------------- Gallery -------------------- */
 #gallery {
     display: flex;
-    /* min-height: 100vh; */
     flex-direction: column;
     background-color: #D9C666;
 }
 
-#gallery-container {
+#gallery-carousel {
     display: flex;
-    /* align-content: center; */
+    position: relative;
     font-size: 0; /* used to remove whitespace between images */
-    width: 90%;
+    width: 90%; /* vary */
     border: solid 2px black;
     margin: 0 auto;
+    background-color: black;
 }
 
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    width: 10%;
-    background-color: black;
-    /* background-color: #D9C666; */
-    /* background-color: rgba(0, 0, 0, 1); */
+#gallery-carousel img {
+    display: none;
+    object-fit: cover;
+    margin: 0 auto;
+    width: min(100%, 400px); /* vary */
+}
+
+#gallery-carousel img[class="active-img"] {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0.7}
+    to {opacity: 1}
 }
 
 .prev-btn, .next-btn {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    color: #D9C666;
-    /* color: black; */
-}
-
-.gallery-img {
     display: none;
-    object-fit: cover;
-    width: 80%;
-    transform: translateX(100%);
-    transition: transform 350ms ease-out;
+    /* position: absolute; */
+    border: none;
+    height: inherit;
+    background-color: black;
+    /* width: calc(absolute((100% - 400px)) / 2); */
+    width: calc((100% - min(100%, 400px)) / 2);
+    color: #D9C666;
 }
 
-.active-img {
-    display: block;
-    transform: translateX(0%);
+.prev-btn {
+    border-right: 2px solid #D9C666;
+}
+
+.next-btn {
+    right: 0%;
+    border-left: 2px solid #D9C666;
+}
+
+#dots {
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#dots .dot {
+    display: inline-block;
+    width: 10px; /* vary */
+    aspect-ratio: 1;
+    margin: 10px; /* vary */
+    background-color: grey;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#dots .active-dot {
+    background-color: white;
 }
 
 
@@ -430,10 +474,6 @@ button:hover {
     }
 
 
-    /* -------------------- GALLERY -------------------- */
-    
-
-
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         font-size: 1rem;
@@ -579,14 +619,15 @@ button:hover {
 
 
     /* -------------------- GALLERY -------------------- */
-    .gallery-container {
-        margin: 0 auto;
+    .prev-btn, .next-btn {
+        display: block;
+        width: calc((100% - min(100%, 400px)) / 2);
     }
-    
-    .gallery-photo {
-        width: calc(100% / 3);
+
+    #gallery-carousel button i {
+        font-size: 2rem;
     }
-    
+
 
     /* -------------------- CONTACT -------------------- */
     .contact-box {
@@ -766,13 +807,17 @@ button:hover {
 
 
     /* -------------------- GALLERY -------------------- */
-    .gallery-container {
+    #gallery-carousel {
         width: 80%;
-        margin: 0 auto;
     }
     
-    .gallery-photo {
-        width: calc(100% / 3);
+    .prev-btn, .next-btn {
+        display: block;
+        width: calc((100% - min(100%, 400px)) / 2);
+    }
+
+    #gallery-carousel button i {
+        font-size: 3rem;
     }
     
 
@@ -956,13 +1001,17 @@ button:hover {
 
 
     /* -------------------- GALLERY -------------------- */
-    .gallery-container {
+    #gallery-carousel {
         width: 70%;
-        margin: 0 auto;
     }
     
-    .gallery-photo {
-        width: calc(100% / 3);
+    .prev-btn, .next-btn {
+        display: block;
+        width: calc((100% - min(100%, 400px)) / 2);
+    }
+
+    #gallery-carousel button i {
+        font-size: 3rem;
     }
 
 
@@ -1148,13 +1197,17 @@ button:hover {
 
 
     /* -------------------- GALLERY -------------------- */
-    .gallery-container {
+    #gallery-carousel {
         width: 60%;
-        margin: 0 auto;
+    }
+    
+    .prev-btn, .next-btn {
+        display: block;
+        width: calc((100% - min(100%, 400px)) / 2);
     }
 
-    .gallery-photo {
-        width: calc(100% / 3);
+    #gallery-carousel button i {
+        font-size: 4rem;
     }
     
 

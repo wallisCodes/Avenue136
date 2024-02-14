@@ -4,7 +4,7 @@ const primaryNav = document.querySelector(".primary-navigation");
 const hamburgerButton = document.querySelector(".hamburger-button");
 const openNavIcon = document.querySelector(".open-nav");
 const closeNavIcon = document.querySelector(".close-nav");
-const navLinks = document.getElementsByClassName("nav-link");
+const navLinks = document.getElementsByClassName("nav-link"); //change to querySelectorAll
 
 
 function openNavMenu() {
@@ -15,7 +15,7 @@ function openNavMenu() {
   document.body.style.overflowY = "hidden";
 
   // Decided against nested css to switch hamburger icons due to only ~80% browser support
-  closeNavIcon.style.display = "block"; 
+  closeNavIcon.style.display = "inline-block"; 
   openNavIcon.style.display = "none";
 }; 
 
@@ -29,7 +29,7 @@ function closeNavMenu() {
 
     // Decided against nested css to switch hamburger icons due to only ~80% browser support
     closeNavIcon.style.display = "none";
-    openNavIcon.style.display = "block";
+    openNavIcon.style.display = "inline-block";
 }
 
 
@@ -81,55 +81,90 @@ function switchService(evt, serviceType) {
 
 
 // =============== GALLERY ===============
-const prevButton = document.querySelector("prev-btn");
-const nextButton = document.querySelector("next-btn");
-const galleryContainer = document.getElementById("gallery-container");
-const galleryImages = document.getElementsByClassName("gallery-img");
+const prevButton = document.querySelector(".prev-btn");
+const nextButton = document.querySelector(".next-btn");
+const dots = document.getElementById("dots");
+const galleryContainer = document.getElementById("gallery-carousel");
+const galleryImages = document.querySelectorAll("#gallery-carousel img");
 
 var imageIndex = 0; // Keep track of currently displayed image
+const carouselSpeed = 4000; // Time in ms before auto-switching image
+var currentInterval;
 
 function prevImage() {
-  imageIndex -= 1;
-
-  for (i = 0; i < galleryImages.length; i++) {
-    galleryImages[i].className = galleryImages[i].className.replace(" active-img", "");
-  }
-
-  if (imageIndex < 0) {
-    imageIndex = galleryImages.length - 1;
-  }
-  galleryImages[imageIndex].className += " active-img";
+  imageIndex--;
+  startInterval();
+  displayImage();
 }
 
 function nextImage() {
-  imageIndex += 1;
+  imageIndex++;
+  startInterval();
+  displayImage();
+}
 
-  for (i = 0; i < galleryImages.length; i++) {
-    galleryImages[i].className = galleryImages[i].className.replace(" active-img", "");
+
+// Generating dots
+galleryImages.forEach((img, i) => {
+  const span = document.createElement("span");
+  span.className = "dot";
+  if (i === 0) span.classList.add("active-dot");
+
+  span.addEventListener("click", () => {
+    imageIndex = i;
+    startInterval();
+    displayImage();
+  });
+
+  dots.appendChild(span);
+})
+
+
+// Auto-skip to next image after fixed time
+startInterval();
+
+function startInterval() {
+  if (currentInterval) {
+    clearInterval(currentInterval);
   }
 
-  if (imageIndex >= galleryImages.length) {
+  currentInterval = setInterval(() => {
+    nextImage();
+  }, carouselSpeed);
+}
+
+
+function displayImage() {
+  if (imageIndex < 0) {
+    imageIndex = galleryImages.length - 1;
+  } else if (imageIndex >= galleryImages.length) {
     imageIndex = 0;
   }
-  galleryImages[imageIndex].className += " active-img";
+
+  galleryImages.forEach(img => img.classList.remove("active-img"));
+  galleryImages[imageIndex].classList.add("active-img");
+
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach(item => item.classList.remove("active-dot"));
+  dots[imageIndex].classList.add("active-dot");
 }
 
 
 // Detecting horizontal swipes to navigate images
 var touchstartX = 0
 var touchendX = 0
-const swipeThreshold = 20;
+// const swipeThreshold = 20;
     
 function checkDirection() {
-  if (touchendX < touchstartX) {
-    nextImage(); //swipe left
-  } else if (touchendX > touchstartX) {
+  if (touchendX < touchstartX) { //swipe left
+    nextImage();
+  } else if (touchendX > touchstartX) { //swipe right
     prevImage();
   } 
 }
 
 galleryContainer.addEventListener('touchstart', event => {
-  // Attempting to only register the swipe if swiping inside the gallery-container
+  // Only register the swipe if swiping inside the gallery-container
   touchstartX = event.changedTouches[0].screenX;
 })
 

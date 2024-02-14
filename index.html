@@ -20,8 +20,8 @@
         <img class="brand-logo" src="assets/img/logo-transparent-bg.png" height="32" alt="Avenue136 logo">
         
         <button aria-expanded="false" class="hamburger-button">
-            <i class="fa-solid fa-bars fa-xl open-nav"></i>
-            <i class="fa-solid fa-scissors fa-rotate-270 fa-xl close-nav" style="display: none"></i>
+            <i class="fa-solid fa-bars fa fa-xl open-nav"></i>
+            <i class="fa-solid fa-xmark fa-xl close-nav" style="display: none"></i>
         </button>
 
         <ul data-visible="false" class="primary-navigation">
@@ -165,22 +165,24 @@
     <section id="gallery">
         <div class="content-title">Gallery</div>
 
-        <div id="gallery-container">
-            <div class="carousel-controls">
-                <button class="prev-btn" onclick="prevImage()">
-                    <i class="fa-solid fa-chevron-left fa-2xl"></i>
-                </button>
-            </div>
+        <div id="gallery-carousel"> 
 
-            <img class="gallery-img active-img" src="assets/img/haircut-4-cropped.jpeg" alt="">
-            <img class="gallery-img" src="assets/img/haircut-5-cropped.jpeg" alt="">
-            <img class="gallery-img" src="assets/img/haircut-3-cropped.jpeg" alt="">
+            <button class="prev-btn" onclick="prevImage()">
+                <i class="fa-solid fa-chevron-left fa-2xl"></i>
+            </button>
+
+            <img class="active-img" src="assets/img/haircut-4-cropped.jpeg" alt="">
+            <img src="assets/img/haircut-5-cropped.jpeg" alt="">
+            <img src="assets/img/haircut-3-cropped.jpeg" alt="">
+
+            <button class="next-btn" onclick="nextImage()">
+                <i class="fa-solid fa-chevron-right fa-2xl"></i>
+            </button>
             
-            <div class="carousel-controls">
-                <button class="next-btn" onclick="nextImage()">
-                    <i class="fa-solid fa-chevron-right fa-2xl"></i>
-                </button>
+            <div id="dots">
+                <!-- <span class="dot"></span> -->
             </div>
+            
         </div>
     </section>
 
