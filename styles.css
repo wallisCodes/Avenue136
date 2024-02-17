@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    min-width: 300px;
     background-color: black;
     margin: 0;
     overflow-x: hidden;
@@ -264,6 +265,7 @@ button:hover {
 #gallery-carousel picture {
     display: none;
     width: min(100%, 400px);
+    margin: 0 auto;
 }
 
 #gallery-carousel img {

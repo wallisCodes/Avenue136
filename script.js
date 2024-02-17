@@ -88,7 +88,7 @@ const galleryContainer = document.getElementById("gallery-carousel");
 const galleryImages = document.querySelectorAll("#gallery-carousel picture");
 
 var imageIndex = 0; // Keep track of currently displayed image
-const carouselSpeed = 4000; // Time in ms before auto-switching image
+const carouselSpeed = 400000; // Time in ms before auto-switching image
 var currentInterval;
 
 function prevImage() {
