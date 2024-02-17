@@ -80,12 +80,12 @@ function switchService(evt, serviceType) {
 
 
 
-// =============== GALLERY ===============
+// =============== GALLERY (IMAGE CAROUSEL) ===============
 const prevButton = document.querySelector(".prev-btn");
 const nextButton = document.querySelector(".next-btn");
 const dots = document.getElementById("dots");
 const galleryContainer = document.getElementById("gallery-carousel");
-const galleryImages = document.querySelectorAll("#gallery-carousel img");
+const galleryImages = document.querySelectorAll("#gallery-carousel picture");
 
 var imageIndex = 0; // Keep track of currently displayed image
 const carouselSpeed = 4000; // Time in ms before auto-switching image

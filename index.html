@@ -10,14 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital@0;1&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <script src="https://kit.fontawesome.com/a9c031cd72.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon code -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        
-        <img class="brand-logo" src="assets/img/logo-transparent-bg.png" height="32" alt="Avenue136 logo">
+        <picture>
+            <source srcset="assets/img/logo-transparent-bg.avif" type="image/avif">
+            <source srcset="assets/img/logo-transparent-bg.webp" type="image/webp">
+            <img class="brand-logo" src="assets/img/logo-transparent-bg.png" alt="Avenue136 logo">
+        </picture>
         
         <button aria-expanded="false" class="hamburger-button">
             <i class="fa-solid fa-bars fa fa-xl open-nav"></i>
@@ -40,8 +54,17 @@
     
     <!-- SHOWCASE/HERO IMAGE -->
     <div class="hero-container">
-        <img class="hero-image-sm" src="assets/img/interior-2-9x16-92vh.jpeg" alt="">
-        <img class="hero-image-lg" src="assets/img/interior-landscape-7.jpeg" alt="">
+        <picture>
+            <source srcset="assets/img/interior-2-9x16-92vh.avif" type="image/avif">
+            <source srcset="assets/img/interior-2-9x16-92vh.webp" type="image/webp">
+            <img class="hero-image-sm" src="assets/img/interior-2-9x16-92vh.jpeg" alt="salon interior home page">
+        </picture>
+
+        <picture>
+            <source srcset="assets/img/interior-landscape-7.webp" type="image/webp">
+            <source srcset="assets/img/interior-landscape-7.avif" type="image/avif">
+            <img class="hero-image-lg" src="assets/img/interior-landscape-7.jpeg" alt="salon interior home page">
+        </picture>
 
         <div class="hero-mask">
             <p class="hero-text-1">Welcome to Avenue136, a brand new unisex hair salon in the heart of Bridgend!</p>
@@ -152,10 +175,11 @@
                     </li>
                 </ul>
             </div>
-
-            <div id="service-photo-container">
-                <img id="service-photo" src="assets/img/chair.jpeg" alt="">                
-            </div>
+ 
+            <picture class="service-photo-container">
+                <source srcset="assets/img/chair.webp" type="image/webp">
+                <img class="service-photo" src="assets/img/chair.jpeg" loading=lazy alt="hairdresser's chair">
+            </picture>          
         </div>
     </section>
 
@@ -166,23 +190,34 @@
         <div class="content-title">Gallery</div>
 
         <div id="gallery-carousel"> 
-
             <button class="prev-btn" onclick="prevImage()">
                 <i class="fa-solid fa-chevron-left fa-2xl"></i>
             </button>
 
-            <img class="active-img" src="assets/img/haircut-4-cropped.jpeg" alt="">
-            <img src="assets/img/haircut-5-cropped.jpeg" alt="">
-            <img src="assets/img/haircut-3-cropped.jpeg" alt="">
+            <!-- Carousel images prioritised by file size and lazy loaded to minimise critical rendering path -->
+            <picture class="active-img">
+                <source srcset="assets/img/haircut-4-cropped.avif" type="image/avif">
+                <source srcset="assets/img/haircut-4-cropped.webp" type="image/webp">
+                <img src="assets/img/haircut-4-cropped.jpeg" loading=lazy alt="hairstyle 1">
+            </picture>
+
+            <picture>
+                <source srcset="assets/img/haircut-5-cropped.avif" type="image/avif">
+                <source srcset="assets/img/haircut-5-cropped.webp" type="image/webp">
+                <img src="assets/img/haircut-5-cropped.jpeg" loading=lazy alt="hairstyle 2">
+            </picture>
+
+            <picture>
+                <source srcset="assets/img/haircut-3-cropped.avif" type="image/avif">
+                <source srcset="assets/img/haircut-3-cropped.webp" type="image/webp">
+                <img src="assets/img/haircut-3-cropped.jpeg" loading=lazy alt="hairstyle 3">
+            </picture>
 
             <button class="next-btn" onclick="nextImage()">
                 <i class="fa-solid fa-chevron-right fa-2xl"></i>
             </button>
             
-            <div id="dots">
-                <!-- <span class="dot"></span> -->
-            </div>
-            
+            <div id="dots"></div>
         </div>
     </section>
 
@@ -228,8 +263,7 @@
                 </li>
                 <li class="opening-times-alt opening-info">
                     <span class="opening-day">Sunday</span><span class="opening-time">Closed</span>
-                </li>
-                
+                </li>   
             </ul>
             
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.322129457727!2d-3.5719902230799456!3d51.50730591070983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e6c4bc38c1edd%3A0xd697f33b1109d07d!2s136%20Waunscil%20Ave%2C%20Bridgend%20CF31%201TN!5e0!3m2!1sen!2suk!4v1700583615221!5m2!1sen!2suk" class="contact-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
