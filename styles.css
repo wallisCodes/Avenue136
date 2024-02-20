@@ -518,6 +518,7 @@ button:hover {
 
     .brand-logo {
         height: 2rem;
+        width: 100%;
     }
 
     .hamburger-button {
