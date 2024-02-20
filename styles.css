@@ -90,6 +90,7 @@ button:hover {
     inset: 0 0 0 60%;
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(0.25rem);
+    -webkit-backdrop-filter: blur(0.25rem);
     padding: calc(7vh + 1rem) 0 1rem;
     z-index: 100;
     height: fit-content;
@@ -122,18 +123,14 @@ button:hover {
 /* -------------------- LANDING PAGE -------------------- */
 .hero-container {
     position: relative;
+    height: 93svh;
     margin: auto;
 }
 
-.hero-image-sm {
-    display: block;
-    height: 93svh;
+.hero-image {
+    height: 100%;
     width: 100%;
     object-fit: cover;
-}
-
-.hero-image-lg {
-    display: none;
 }
 
 .hero-mask {
@@ -426,19 +423,6 @@ button:hover {
 
 
     /* -------------------- LANDING PAGE -------------------- */
-    .hero-image-sm {
-        display: block;
-    }
-
-    .hero-image-lg {
-        display: none;
-    }
-
-    .hero-mask {
-        width: 90%;
-        left: calc(5% - 2px);
-    }
-
     .hero-text-1, .hero-text-2 {
         font-size: 1em;
         padding: 0 1rem;
@@ -559,22 +543,6 @@ button:hover {
 
 
     /* -------------------- LANDING PAGE -------------------- */
-    .hero-image-sm {
-        display: none;
-    }
-
-    .hero-image-lg {
-        display: block;
-        height: 93vh;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .hero-mask {
-        width: 90%;
-        left: calc(5% - 2px);
-    }
-
     .hero-text-1, .hero-text-2 {
         font-size: 1.1em;
         padding: 0 1rem;
@@ -728,17 +696,6 @@ button:hover {
 
 
     /* -------------------- LANDING PAGE -------------------- */
-    .hero-image-sm {
-        display: none;
-    }
-
-    .hero-image-lg {
-        display: block;
-        height: 93vh;
-        width: 100%;
-        object-fit: cover;
-    }
-
     .hero-mask {
         width: 80%;
         left: calc(10% - 2px);
@@ -912,17 +869,6 @@ button:hover {
 
 
     /* -------------------- LANDING PAGE -------------------- */
-    .hero-image-sm {
-        display: none;
-    }
-
-    .hero-image-lg {
-        display: block;
-        height: 93vh;
-        width: 100%;
-        object-fit: cover;
-    }
-
     .hero-mask {
         width: 70%;
         left: calc(15% - 2px);
@@ -1097,17 +1043,6 @@ button:hover {
 
 
     /* -------------------- LANDING PAGE -------------------- */
-    .hero-image-sm {
-        display: none;
-    }
-
-    .hero-image-lg {
-        display: block;
-        height: 93vh;
-        width: 100%;
-        object-fit: cover;
-    }
-
     .hero-mask {
         width: 60%;
         left: calc(20% - 2px);

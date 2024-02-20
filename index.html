@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Avenue 136</title>
+    <title>Avenue136</title>
+    <meta name="description" content="Avenue136 is a must visit unisex hair salon in the heart of Bridgend.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital@0;1&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -24,15 +25,17 @@
 </head>
 
 <body>
-
     <!-- NAVBAR -->
     <nav class="navbar">
         <picture>
-            <source srcset="assets/img/logo-transparent-bg.avif" type="image/avif">
-            <source srcset="assets/img/logo-transparent-bg.webp" type="image/webp">
-            <img class="brand-logo" src="assets/img/logo-transparent-bg.png" alt="Avenue136 logo">
+            <source type="image/webp" media="(max-width: 480px)" srcset="assets/img/logo-transparent-bg-211x40.webp">
+            <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/logo-transparent-bg-422x80.webp">
+            <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/logo-transparent-bg-633x120.webp">
+            <source type="image/png" media="(max-width: 480px)" srcset="assets/img/logo-transparent-bg-211x40.png">
+            <source type="image/png" media="(max-width: 767px)" srcset="assets/img/logo-transparent-bg-422x80.png">
+            <img class="brand-logo" src="assets/img/logo-transparent-bg-633x120.png" alt="Avenue136 logo">
         </picture>
-        
+
         <button aria-expanded="false" class="hamburger-button">
             <i class="fa-solid fa-bars fa fa-xl open-nav"></i>
             <i class="fa-solid fa-xmark fa-xl close-nav" style="display: none"></i>
@@ -55,15 +58,11 @@
     <!-- SHOWCASE/HERO IMAGE -->
     <div class="hero-container">
         <picture>
-            <source srcset="assets/img/interior-2-9x16-92vh.avif" type="image/avif">
-            <source srcset="assets/img/interior-2-9x16-92vh.webp" type="image/webp">
-            <img class="hero-image-sm" src="assets/img/interior-2-9x16-92vh.jpeg" alt="salon interior home page">
-        </picture>
-
-        <picture>
-            <source srcset="assets/img/interior-landscape-7.webp" type="image/webp">
-            <source srcset="assets/img/interior-landscape-7.avif" type="image/avif">
-            <img class="hero-image-lg" src="assets/img/interior-landscape-7.jpeg" alt="salon interior home page">
+            <source type="image/avif" media="(max-width: 768px)" srcset="assets/img/interior-portrait-768x1256.avif">
+            <source type="image/webp" media="(max-width: 768px)" srcset="assets/img/interior-portrait-768x1256.webp">
+            <source type="image/jpeg" media="(max-width: 768px)" srcset="assets/img/interior-portrait-768x1256.jpeg">
+            <source type="image/webp" media="(max-width: 1200px)" srcset="assets/img/interior-landscape-1600x1200.webp">
+            <img class="hero-image" src="assets/img/interior-landscape-1600x1200.jpeg" alt="Avenue136 logo">
         </picture>
 
         <div class="hero-mask">
@@ -177,9 +176,12 @@
             </div>
  
             <picture class="service-photo-container">
-                <source srcset="assets/img/chair.webp" type="image/webp">
-                <img class="service-photo" src="assets/img/chair.jpeg" loading=lazy alt="hairdresser's chair">
-            </picture>          
+                <source type="image/webp" media="(max-width: 960px)" srcset="assets/img/chair-960x1280.webp">
+                <source type="image/jpeg" media="(max-width: 960px)" srcset="assets/img/chair-960x1280.jpeg">
+
+                <source type="image/webp" media="(min-width: 961px)" srcset="assets/img/chair-1200x1600.webp">
+                <img class="service-photo" src="assets/img/chair-1200x1600.jpeg" loading=lazy alt="Hairdresser's chair">
+            </picture>
         </div>
     </section>
 
@@ -194,23 +196,31 @@
                 <i class="fa-solid fa-chevron-left fa-2xl"></i>
             </button>
 
-            <!-- Carousel images prioritised by file size and lazy loaded to minimise critical rendering path -->
             <picture class="active-img">
-                <source srcset="assets/img/haircut-4-cropped.avif" type="image/avif">
-                <source srcset="assets/img/haircut-4-cropped.webp" type="image/webp">
-                <img src="assets/img/haircut-4-cropped.jpeg" loading=lazy alt="hairstyle 1">
+                <source type="image/avif" media="(max-width: 480px)" srcset="assets/img/haircut-4-480x960.avif">
+                <source type="image/webp" media="(max-width: 480px)" srcset="assets/img/haircut-4-480x960.webp">
+                <source type="image/jpeg" media="(max-width: 480px)" srcset="assets/img/haircut-4-480x960.jpeg">
+                <source type="image/avif" media="(min-width: 481px)" srcset="assets/img/haircut-4-980x1960.avif">
+                <source type="image/webp" media="(min-width: 481px)" srcset="assets/img/haircut-4-980x1960.webp">
+                <img src="assets/img/haircut-4-980x1960.jpeg" alt="Hairstyle 1">
             </picture>
 
             <picture>
-                <source srcset="assets/img/haircut-5-cropped.avif" type="image/avif">
-                <source srcset="assets/img/haircut-5-cropped.webp" type="image/webp">
-                <img src="assets/img/haircut-5-cropped.jpeg" loading=lazy alt="hairstyle 2">
+                <source type="image/avif" media="(max-width: 480px)" srcset="assets/img/haircut-5-480x960.avif">
+                <source type="image/webp" media="(max-width: 480px)" srcset="assets/img/haircut-5-480x960.webp">
+                <source type="image/jpeg" media="(max-width: 480px)" srcset="assets/img/haircut-5-480x960.jpeg">
+                <source type="image/avif" media="(min-width: 481px)" srcset="assets/img/haircut-5-980x1960.avif">
+                <source type="image/webp" media="(min-width: 481px)" srcset="assets/img/haircut-5-980x1960.webp">
+                <img src="assets/img/haircut-5-980x1960.jpeg" alt="Hairstyle 2">
             </picture>
 
             <picture>
-                <source srcset="assets/img/haircut-3-cropped.avif" type="image/avif">
-                <source srcset="assets/img/haircut-3-cropped.webp" type="image/webp">
-                <img src="assets/img/haircut-3-cropped.jpeg" loading=lazy alt="hairstyle 3">
+                <source type="image/avif" media="(max-width: 480px)" srcset="assets/img/haircut-3-480x960.avif">
+                <source type="image/webp" media="(max-width: 480px)" srcset="assets/img/haircut-3-480x960.webp">
+                <source type="image/jpeg" media="(max-width: 480px)" srcset="assets/img/haircut-3-480x960.jpeg">
+                <source type="image/avif" media="(min-width: 481px)" srcset="assets/img/haircut-3-980x1960.avif">
+                <source type="image/webp" media="(min-width: 481px)" srcset="assets/img/haircut-3-980x1960.webp">
+                <img src="assets/img/haircut-3-980x1960.jpeg" alt="Hairstyle 3">
             </picture>
 
             <button class="next-btn" onclick="nextImage()">
@@ -278,7 +288,7 @@
         <a href="https://www.instagram.com/avenue136_/" target="_blank" class="instagram-icon">
             <i class="fa-brands fa-instagram fa-lg"></i>
         </a>
-        <span class="copyright">&#169; 2024 wallisCodes</span>
+        <span class="copyright">&#169; 2024 Avenue136</span>
         <a href="#" class="footer-icon">
             <i class="fa-solid fa-circle-arrow-up fa-lg" ></i>
         </a>
