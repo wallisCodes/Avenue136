@@ -1,6 +1,4 @@
 * {
-    font-family: 'Roboto Mono', monospace;
-    font-family: 'Raleway', sans-serif;
     font-family: 'Lato', sans-serif;    
 }
 
@@ -49,7 +47,7 @@ button:hover {
 .navbar {
     display: flex;
     width: 90%;
-    height: 7svh;
+    height: clamp(3rem, 7svh, 4rem);
     justify-content: start;
     align-items: center;
     margin: 0 auto;
@@ -123,7 +121,7 @@ button:hover {
 /* -------------------- LANDING PAGE -------------------- */
 .hero-container {
     position: relative;
-    height: 93svh;
+    height: max(93svh, 40rem);
     margin: auto;
 }
 
