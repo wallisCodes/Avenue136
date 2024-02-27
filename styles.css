@@ -396,8 +396,13 @@ button:hover {
     font-size: 1rem;
 }
 
-.footer-icon, .instagram-icon {
+.footer-icon, .facebook-icon, .instagram-icon {
     color: #D9C666;
+    text-decoration: none;
+}
+
+.facebook-icon {
+    margin-right: 0.5rem;
 }
 
 
@@ -643,8 +648,12 @@ button:hover {
         font-size: 1.2rem;
     }
 
-    .footer-icon, .instagram-icon {
+    .footer-icon, .facebook-icon, .instagram-icon {
         font-size: 1.2rem;
+    }
+
+    .facebook-icon {
+        margin-right: 0.75rem;
     }
 }
 
@@ -816,8 +825,12 @@ button:hover {
         font-size: 1.4rem;
     }
 
-    .footer-icon, .instagram-icon {
+    .footer-icon, .facebook-icon, .instagram-icon {
         font-size: 1.4rem;
+    }
+
+    .facebook-icon {
+        margin-right: 1rem;
     }
 }
 
@@ -990,8 +1003,12 @@ button:hover {
         font-size: 1.4rem;
     }
 
-    .footer-icon, .instagram-icon {
+    .footer-icon, .facebook-icon, .instagram-icon {
         font-size: 1.4rem;
+    }
+
+    .facebook-icon {
+        margin-right: 1.25rem;
     }
 }
 
@@ -1166,7 +1183,11 @@ button:hover {
         font-size: 1.5rem;
     }
 
-    .footer-icon, .instagram-icon {
+    .footer-icon, .facebook-icon, .instagram-icon {
         font-size: 1.5rem;
+    }
+
+    .facebook-icon {
+        margin-right: 1.5rem;
     }
 }
