@@ -240,7 +240,7 @@ button:hover {
 }
 
 
-/* -------------------- Gallery -------------------- */
+/* -------------------- GALLERY -------------------- */
 #gallery {
     display: flex;
     flex-direction: column;
@@ -324,11 +324,73 @@ button:hover {
 }
 
 
+/* -------------------- FAQ -------------------- */
+#faq {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2EBC9;
+    /* min-height: 70vh; */
+}
+
+.accordion {
+    font-size: 0.9rem;
+    background-color: #F2EBC9;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.accordion .faq-box {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.accordion .faq-box:last-child {
+    margin-bottom: 0;
+}
+
+.accordion .faq-box .question {
+    position: relative;
+    font-weight: bold;
+    padding: 10px;
+    background-color: black;
+    color: #D9C666;
+    cursor: pointer;
+}
+
+.accordion .faq-box .question::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+.accordion .faq-box.active-faq .question::before {
+    content: "-";
+}
+
+.accordion .faq-box .answer {
+    position: relative;
+    padding: 0 10px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .faq-box.active-faq .answer {
+    height: auto;
+    padding: 10px;
+}
+
+
 /* -------------------- CONTACT -------------------- */
 #contact {
     display: flex;
     flex-direction: column;
-    background-color: #F2EBC9;
+    background-color: #D9C666;
 }
 
 .contact-box {
@@ -362,7 +424,7 @@ button:hover {
 }
 
 .contact-item-alt, .opening-times-alt {
-    background-color: #D9C666;
+    background-color: #F2EBC9;
 }
 
 .opening-day, .opening-time, .contact-icon {
@@ -394,6 +456,11 @@ button:hover {
 
 .copyright {
     font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
 }
 
 .footer-icon, .facebook-icon, .instagram-icon {
@@ -469,10 +536,15 @@ button:hover {
     }
 
 
+    /* -------------------- FAQ -------------------- */
+    .accordion {
+        font-size: 1rem;
+    }
+
+
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         font-size: 1rem;
-        width: 90%;
     }
 
     .contact-info, .contact-map {
@@ -603,6 +675,12 @@ button:hover {
 
     #gallery-carousel button i {
         font-size: 2rem;
+    }
+
+
+    /* -------------------- FAQ -------------------- */
+    .accordion {
+        font-size: 1rem;
     }
 
 
@@ -782,13 +860,20 @@ button:hover {
     }
     
 
+    /* -------------------- FAQ -------------------- */
+    .accordion {
+        font-size: 1.1rem;
+        width: 80%;
+    }
+
+
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         display: flex;
         flex-direction: row;
         margin-bottom: 0;
         width: 80%;
-        font-size: 1.1em;
+        font-size: 1.1rem;
     }
 
     .contact-info, .contact-map {
@@ -960,12 +1045,19 @@ button:hover {
     }
 
 
+    /* -------------------- FAQ -------------------- */
+    .accordion {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+
+
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         display: flex;
         flex-direction: row;
         width: 70%;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         margin: 0 auto;
     }
 
@@ -1140,13 +1232,20 @@ button:hover {
     }
     
 
+    /* -------------------- FAQ -------------------- */
+    .accordion {
+        font-size: 1.2rem;
+        width: 60%;
+    }
+
+
     /* -------------------- CONTACT -------------------- */
     .contact-box {
         display: flex;
         flex-direction: row;
         margin: 0 auto;
         width: 60%;
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
 
     .contact-info, .contact-map {

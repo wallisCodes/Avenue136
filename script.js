@@ -175,6 +175,17 @@ galleryContainer.addEventListener('touchend', event => {
 
 
 
+// =============== FAQ ===============
+const faq_content = document.querySelectorAll(".faq-box");
+
+faq_content.forEach((question) => {
+  question.addEventListener("click", function() {
+    question.classList.toggle("active-faq");
+  })
+});
+
+
+
 // =============== CONTACT ===============
 // Retrieving current week day to highlight it on the opening times info
 const date = new Date();
